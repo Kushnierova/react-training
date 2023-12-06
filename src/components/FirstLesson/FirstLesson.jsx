@@ -5,7 +5,7 @@ import Dropdown from './Dropdown/Dropdown';
 export const FirstLesson = () => {
   return (
     <div>
-      <Dropdown></Dropdown>
+      <Dropdown/>
     </div>
   );
 };
