@@ -20,7 +20,6 @@ class Dropdown extends Component {
           {this.state.visible ? 'Hide':'Show' }
         </button>
 
-
         {this.state.visible && (
           <div className={css.dropdown__menu}>Menu</div>
         )}
