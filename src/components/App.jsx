@@ -1,4 +1,4 @@
-import { FirstLesson } from './FirstLesson/FirstLesson';
+import FirstLesson from './FirstLesson/FirstLesson';
 
 export const App = () => {
   return (
