@@ -1,16 +1,15 @@
+import { FirstLesson } from './FirstLesson/FirstLesson';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <p> React template</p>
+      <ul>
+        <li>
+          <p> II заняття</p>
+          <FirstLesson></FirstLesson>
+        </li>
+      </ul>
     </div>
   );
 };

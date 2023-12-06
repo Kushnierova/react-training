@@ -1,0 +1,19 @@
+.dropdown {
+  width: 170px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.dropdown__toggle {
+  width: 150px;
+}
+.dropdown__menu {
+  background-color: aqua;
+  border-radius: 15px;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+}
