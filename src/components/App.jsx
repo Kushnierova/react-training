@@ -7,7 +7,7 @@ export const App = () => {
       <ul>
         <li>
           <p> II заняття</p>
-          <FirstLesson></FirstLesson>
+          <FirstLesson/>
         </li>
       </ul>
     </div>
