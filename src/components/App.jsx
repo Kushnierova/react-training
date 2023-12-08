@@ -1,14 +1,6 @@
 import FirstLesson from './FirstLesson/FirstLesson';
-import ColorPicker from './FirstLesson/ColorPicker/ColorPicker';
 
-const options = [
-  { label: 'red', color: '#F44336' },
-  { label: 'green', color: '#4CAF50' },
-  { label: 'blue', color: '#2196F3' },
-  { label: 'grey', color: '#607D8B' },
-  { label: 'pink', color: '#E91E63' },
-  { label: 'indigo', color: '#3F51B5' },
-];
+
 
 export const App = () => {
   return (
@@ -19,9 +11,6 @@ export const App = () => {
           <p> II заняття</p>
           <FirstLesson />
         </li>
-        <div>
-          <ColorPicker options={options} />
-        </div>
       </ul>
     </div>
   );
