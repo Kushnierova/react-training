@@ -1,5 +1,6 @@
 .dropdown {
   width: 170px;
+  height: 80px;
   background-color: bisque;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,7 @@
 .dropdown__menu {
   background-color: aqua;
   border-radius: 15px;
-  height: 50px;
+  height: 30px;
   width: 150px;
   text-align: center;
 }

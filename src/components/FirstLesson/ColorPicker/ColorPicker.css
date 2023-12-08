@@ -1,0 +1,40 @@
+.container__ColorPicker {
+  margin-top: 20px;
+  background-color: beige;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.title__ColorPicker {
+  color: rgb(75, 34, 113);
+  padding: 20px;
+}
+.p__ColorPicker {
+  font-size: 15px;
+  padding-left: 20px;
+}
+.list__ColorPicker {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.item__ColorPicker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: transform 250ms linear;
+}
+.item--active__ColorPicker {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 15px rgb(20, 7, 7);
+}
+/* .item__ColorPicker:hover,
+.item__ColorPicker:focus {
+  transform: scale(1.1);
+} */
