@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import css from './Dropdown.module.css';
 
 class Dropdown extends Component {
+
   state = {
     visible: false,
   };
+  
   toggle = () => {
     this.setState(prevState => ({ visible: !prevState.visible }));
   };
