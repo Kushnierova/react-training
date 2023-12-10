@@ -1,8 +1,8 @@
 // import PropTypes from 'prop-types';
 // import css from './FirstLesson.module.css';
 import React from 'react';
-import Dropdown from './Dropdown/Dropdown';
-import ColorPicker from './ColorPicker/ColorPicker';
+import Dropdown from './Dropdown';
+import ColorPicker from './ColorPicker';
 
 const options = [
   { label: 'red', color: '#F44336' },
