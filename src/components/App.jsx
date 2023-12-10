@@ -1,6 +1,5 @@
 import FirstLesson from './FirstLesson';
-import ToDoList from './ToDoList';
-
+import ToDoListBox from './ToDoListBox';
 
 export const App = () => {
   return (
@@ -12,10 +11,7 @@ export const App = () => {
           <FirstLesson />
         </li>
         <li>
-          <p>
-            Колекція нотатків
-            <ToDoList/>
-          </p>
+          <ToDoListBox />
         </li>
       </ul>
     </div>
