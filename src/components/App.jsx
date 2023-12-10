@@ -1,5 +1,5 @@
-import FirstLesson from './FirstLesson/FirstLesson';
-
+import FirstLesson from './FirstLesson';
+import ToDoList from './ToDoList';
 
 
 export const App = () => {
@@ -10,6 +10,12 @@ export const App = () => {
         <li>
           <p> II заняття</p>
           <FirstLesson />
+        </li>
+        <li>
+          <p>
+            Колекція нотатків
+            <ToDoList/>
+          </p>
         </li>
       </ul>
     </div>
