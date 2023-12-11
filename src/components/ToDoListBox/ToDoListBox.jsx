@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './ToDoListBox.module.css'
 import ToDoList from './ToDoList';
 
 class ToDoListBox extends Component {
@@ -11,12 +12,6 @@ class ToDoListBox extends Component {
     ],
   };
 
-  deleteTodo = todoId => {
-    this.setState(prevState => ({
-      todos: prevState.todos.filter(todo => todo.id !== todoId),
-    }));
-  };
-
   render() {
     const { todos } = this.state;
     const totalTodoCount = todos.length;
@@ -27,7 +22,7 @@ class ToDoListBox extends Component {
       0
     );
     return (
-      <div>
+      <div className={css.container}>
         <h2>Колекція нотатків</h2>
         <p>Загальна кількість: {totalTodoCount}</p>
         <p>Виконано: {CompletedTodos}</p>

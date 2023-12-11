@@ -6,20 +6,28 @@ import SecondLesson from './SecondLesson';
 class App extends Component {
   state = {};
 
+  deleteTodo = todoId => {
+    this.setState(prevState => ({
+      todos: prevState.todos.filter(todo => todo.id !== todoId),
+    }));
+  };
+
+  formSubmitHandler = data => {
+    console.log(data);
+  };
+
   render() {
     return (
       <div>
-        <p> React template</p>
         <ul>
-          {/* <li>
-          <p> II заняття</p>
-          <FirstLesson />
-        </li>
-        <li>
-          <ToDoListBox />
-        </li> */}
           <li>
-            <SecondLesson />
+            <FirstLesson />
+          </li>
+          <li>
+            <ToDoListBox />
+          </li>
+          <li>
+            <SecondLesson onSubmit={this.formSubmitHandler} />
           </li>
         </ul>
       </div>

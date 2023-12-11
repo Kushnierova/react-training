@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './SecondLesson.module.css'
 
 class SecondLesson extends Component {
   state = {
@@ -28,21 +29,26 @@ class SecondLesson extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    console.log(this.state);
+    this.props.onSubmit(this.state);
+    this.reset();
+  };
+
+  reset = () => {
+    this.setState({ name: '', lastName: '' });
   };
   render() {
     // const { inputValue } = this.state;
     const { name } = this.state;
     const { lastName } = this.state;
     return (
-      <div>
+      <div className={css.container}>
         {/* <input
           type="text"
           value={inputValue}
           onChange={this.handleInputChange}
         ></input> */}
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className={css.form}>
           <label htmlFor="">
             Name
             <input
