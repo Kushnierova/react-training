@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import css from './SecondLesson.module.css'
+import css from './SecondLesson.module.css';
+import shortid from 'shortid';
 
 class SecondLesson extends Component {
   state = {
@@ -7,6 +8,9 @@ class SecondLesson extends Component {
     name: '',
     lastName: '',
   };
+
+  nameInputId = shortid.generate();
+  lastNameInputId = shortid.generate();
 
   //   handleInputChange = e => {
   //     console.log(e.currentTarget.value);
@@ -49,22 +53,24 @@ class SecondLesson extends Component {
         ></input> */}
 
         <form onSubmit={this.handleSubmit} className={css.form}>
-          <label htmlFor="">
+          <label htmlFor={this.nameInputId}>
             Name
             <input
               type="text"
               name="name"
               value={name}
               onChange={this.handleChange}
+              id={this.nameInputId}
             />
           </label>
-          <label>
+          <label htmlFor={this.lastNameInputId}>
             Last name
             <input
               type="text"
               name="lastName"
               value={lastName}
               onChange={this.handleChange}
+              id={this.lastNameInputId}
             />
           </label>
 
