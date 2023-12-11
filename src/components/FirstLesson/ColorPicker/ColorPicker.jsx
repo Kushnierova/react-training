@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class ColorPicker extends Component {
   state = {
-    activeOptionIdx: 2,
+    activeOptionIdx: 0,
   };
   setActiveIdx = index => {
     this.setState({ activeOptionIdx: index });
