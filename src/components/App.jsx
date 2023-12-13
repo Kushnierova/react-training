@@ -12,6 +12,8 @@ class App extends Component {
     }));
   };
 
+  
+
   formSubmitHandler = data => {
     console.log(data);
   };

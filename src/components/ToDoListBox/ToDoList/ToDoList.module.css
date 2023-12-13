@@ -1,0 +1,15 @@
+.listItem {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+
+.listItemCompleted {
+}
+.checkbox {
+}
+.text {
+}
+.btn {
+  cursor: pointer;
+}
