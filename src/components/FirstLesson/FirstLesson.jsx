@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-// import css from './FirstLesson.module.css';
+import css from './FirstLesson.module.css';
 import React from 'react';
 import Dropdown from './Dropdown';
 import ColorPicker from './ColorPicker';
@@ -14,7 +14,7 @@ const options = [
 ];
 
 const FirstLesson = () => (
-  <div>
+  <div className={css.container}> 
     <div>
       <Dropdown />
     </div>
