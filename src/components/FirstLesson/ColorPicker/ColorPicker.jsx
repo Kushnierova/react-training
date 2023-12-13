@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+// https://github.com/JedWatson/classnames
+// npm install classnames Треба в терміналі
+import classNames from 'classnames';
+
 // import css from './ColorPicker.module.css';
 
 class ColorPicker extends Component {
@@ -8,21 +12,29 @@ class ColorPicker extends Component {
   setActiveIdx = index => {
     this.setState({ activeOptionIdx: index });
   };
+  // Це без бібліотеки ClassNames
+  // makeOptionClassName = index => {
+  //   const optionClasses = ['item__ColorPicker'];
+
+  //   if (index === this.state.activeOptionIdx) {
+  //     optionClasses.push('item--active__ColorPicker');
+  //   }
+
+  //   return optionClasses.join(' ');
+  // };
+
+  // Це з бібліотекою ClassName, де ClassNames це функція цієї бібліотеки
   makeOptionClassName = index => {
-    const optionClasses = ['item__ColorPicker'];
-
-    if (index === this.state.activeOptionIdx) {
-      optionClasses.push('item--active__ColorPicker');
-    }
-
-    return optionClasses.join(' ');
+    return classNames('item__ColorPicker', {
+      'item--active__ColorPicker': index === this.state.activeOptionIdx,
+    });
   };
 
   render() {
-    const {activeOptionIdx} = this.state;
-    const {options} = this.props;  
+    const { activeOptionIdx } = this.state;
+    const { options } = this.props;
     const { label } = options[activeOptionIdx];
-    
+
     return (
       <div className="container__ColorPicker">
         <h2 className="title__ColorPicker">Color Picker</h2>
