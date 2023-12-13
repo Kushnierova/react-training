@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Цей варіант для SASS
 // https://github.com/JedWatson/classnames
 // npm install classnames Треба в терміналі
 import classNames from 'classnames';
@@ -41,14 +42,16 @@ class ColorPicker extends Component {
         <p className="p__ColorPicker">You chose {label} color</p>
         <ul className="list__ColorPicker">
           {options.map(({ label, color }, index) => (
-            <li key={index}>
-              <button
-                key={label}
-                className={this.makeOptionClassName(index)}
-                style={{ backgroundColor: color }}
-                onClick={() => this.setActiveIdx(index)}
-              ></button>
-            </li>
+            <button
+              key={label}
+              className={this.makeOptionClassName(index)}
+              // Також можна написали інлайн функцією
+              // className={classNames('item__ColorPicker', {
+              //   'item--active__ColorPicker': index === this.state.activeOptionIdx,
+              // })}
+              style={{ backgroundColor: color }}
+              onClick={() => this.setActiveIdx(index)}
+            ></button>
           ))}
         </ul>
       </div>
