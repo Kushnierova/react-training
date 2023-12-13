@@ -29,7 +29,7 @@ class ColorPicker extends Component {
         <p className="p__ColorPicker">You chose {label} color</p>
         <ul className="list__ColorPicker">
           {options.map(({ label, color }, index) => (
-            <li>
+            <li key={index}>
               <button
                 key={label}
                 className={this.makeOptionClassName(index)}
