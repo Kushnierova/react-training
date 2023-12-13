@@ -7,6 +7,8 @@ class SecondLesson extends Component {
     // inputValue: '',
     name: '',
     lastName: '',
+    experience: 'junior',
+    ok: false,
   };
 
   nameInputId = shortid.generate();
@@ -37,6 +39,11 @@ class SecondLesson extends Component {
     this.reset();
   };
 
+  handleOkChange = e => {
+    // console.log(e.currentTarget.checked);
+    this.setState({ ok: e.currentTarget.checked });
+  };
+
   reset = () => {
     this.setState({ name: '', lastName: '' });
   };
@@ -44,6 +51,8 @@ class SecondLesson extends Component {
     // const { inputValue } = this.state;
     const { name } = this.state;
     const { lastName } = this.state;
+    const { experience } = this.state;
+    const { ok } = this.state;
     return (
       <div className={css.container}>
         {/* <input
@@ -53,8 +62,8 @@ class SecondLesson extends Component {
         ></input> */}
 
         <form onSubmit={this.handleSubmit} className={css.form}>
-          <label htmlFor={this.nameInputId}>
-            Name
+          <label htmlFor={this.nameInputId} className={css.textInput}>
+            Name:
             <input
               type="text"
               name="name"
@@ -63,8 +72,8 @@ class SecondLesson extends Component {
               id={this.nameInputId}
             />
           </label>
-          <label htmlFor={this.lastNameInputId}>
-            Last name
+          <label htmlFor={this.lastNameInputId} className={css.textInput}>
+            Last name:
             <input
               type="text"
               name="lastName"
@@ -74,7 +83,53 @@ class SecondLesson extends Component {
             />
           </label>
 
-          <button type="submit">Sent</button>
+          <p>Your level is:</p>
+          <div className={css.radioBtn}>
+            <label>
+              <input
+                type="radio"
+                name="experience"
+                value="junior"
+                onChange={this.handleChange}
+                checked={experience === 'junior'}
+              />
+              Junior
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="experience"
+                value="middle"
+                onChange={this.handleChange}
+                checked={experience === 'middle'}
+              />
+              Middle
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="experience"
+                value="senior"
+                onChange={this.handleChange}
+                checked={experience === 'senior'}
+              />
+              Senior
+            </label>
+          </div>
+
+          <label>
+            <input
+              type="checkbox"
+              name=""
+              checked={ok}
+              onChange={this.handleOkChange}
+            />
+            Ok
+          </label>
+
+          <button type="submit" disabled={!ok} className={css.submitBtn}>
+            Sent
+          </button>
         </form>
       </div>
     );
