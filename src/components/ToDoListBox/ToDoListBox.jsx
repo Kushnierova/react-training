@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import css from './ToDoListBox.module.css';
 import ToDoList from './ToDoList';
+import ToDoEditor from './ToDoEditor';
 
 class ToDoListBox extends Component {
   state = {
@@ -59,6 +60,7 @@ class ToDoListBox extends Component {
     );
     return (
       <div className={css.container}>
+        <ToDoEditor />
         <h2>Колекція нотатків</h2>
         <p>Загальна кількість: {totalTodoCount}</p>
         <p>Виконано: {CompletedTodos}</p>
