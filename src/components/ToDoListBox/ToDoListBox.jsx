@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import shortid from 'shortid';
 import css from './ToDoListBox.module.css';
 import ToDoList from './ToDoList';
 import ToDoEditor from './ToDoEditor';
@@ -11,6 +12,24 @@ class ToDoListBox extends Component {
       { id: 'id-3', text: 'Todo 3', completed: false },
       { id: 'id-4', text: 'Todo 4', completed: false },
     ],
+  };
+
+  addTodo = text => {
+    console.log(text);
+
+    const todo = {
+      id: shortid.generate(),
+      // text: text, Коротка властивість нижче
+      text,
+      completed: false,
+    };
+
+    this.setState(({todos}) => ({
+      // Додати на початок списку
+      todos: [todo, ...todos],
+      // Додати на кінець списку
+      // todos: [ ..todos, todo],
+    }));
   };
 
   deleteTodo = todoId => {
@@ -60,7 +79,7 @@ class ToDoListBox extends Component {
     );
     return (
       <div className={css.container}>
-        <ToDoEditor />
+        <ToDoEditor onSubmit={this.addTodo} />
         <h2>Колекція нотатків</h2>
         <p>Загальна кількість: {totalTodoCount}</p>
         <p>Виконано: {CompletedTodos}</p>

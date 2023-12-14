@@ -14,6 +14,10 @@ class ToDoEditor extends Component {
     e.preventDefault();
 
     console.log(this.state);
+
+    this.props.onSubmit(this.state.message);
+
+    this.setState({ message: '' });
   };
 
   render() {
