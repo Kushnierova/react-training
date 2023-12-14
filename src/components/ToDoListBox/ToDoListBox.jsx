@@ -3,6 +3,7 @@ import shortid from 'shortid';
 import css from './ToDoListBox.module.css';
 import ToDoList from './ToDoList';
 import ToDoEditor from './ToDoEditor';
+import Filter from './Filter';
 
 class ToDoListBox extends Component {
   state = {
@@ -12,6 +13,7 @@ class ToDoListBox extends Component {
       { id: 'id-3', text: 'Todo 3', completed: false },
       { id: 'id-4', text: 'Todo 4', completed: false },
     ],
+    filter: '',
   };
 
   addTodo = text => {
@@ -24,7 +26,7 @@ class ToDoListBox extends Component {
       completed: false,
     };
 
-    this.setState(({todos}) => ({
+    this.setState(({ todos }) => ({
       // Додати на початок списку
       todos: [todo, ...todos],
       // Додати на кінець списку
@@ -68,23 +70,46 @@ class ToDoListBox extends Component {
     }));
   };
 
-  render() {
+  changeFilter = e => {
+    this.setState({ filter: e.currentTarget.value });
+  };
+
+  getVisibleTodos = () => {
+    const { todos, filter } = this.state;
+    const normalizedFilter = filter.toLowerCase();
+
+    return todos.filter(todo =>
+      todo.text.toLowerCase().includes(normalizedFilter)
+    );
+  };
+
+  getCompletedTodoCount = () => {
     const { todos } = this.state;
-    const totalTodoCount = todos.length;
-    // const CompletedTodos = todos.filter(todo => todo.completed);
-    // console.log(CompletedTodos.length);
-    const CompletedTodos = todos.reduce(
+    return todos.reduce(
       (total, todo) => (todo.completed ? total + 1 : total),
       0
     );
+  };
+  
+  render() {
+    const { todos, filter } = this.state;
+    const totalTodoCount = todos.length;
+    // console.log(CompletedTodos.length);
+    const CompletedTodos = this.getCompletedTodoCount();
+    const visibleTodos = this.getVisibleTodos();
+
     return (
       <div className={css.container}>
         <ToDoEditor onSubmit={this.addTodo} />
+
+        <Filter value={filter} onChange={this.changeFilter} />
+
         <h2>Колекція нотатків</h2>
         <p>Загальна кількість: {totalTodoCount}</p>
         <p>Виконано: {CompletedTodos}</p>
+
         <ToDoList
-          todos={todos}
+          todos={visibleTodos}
           onDeleteTodo={this.deleteTodo}
           onToggleCompleted={this.toggleCompleted}
         />
