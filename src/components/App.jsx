@@ -6,14 +6,6 @@ import SecondLesson from './SecondLesson';
 class App extends Component {
   state = {};
 
-  deleteTodo = todoId => {
-    this.setState(prevState => ({
-      todos: prevState.todos.filter(todo => todo.id !== todoId),
-    }));
-  };
-
-  
-
   formSubmitHandler = data => {
     console.log(data);
   };
