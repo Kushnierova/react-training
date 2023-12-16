@@ -3,8 +3,12 @@ import React from 'react';
 const Filter = ({ value, onChange }) => {
   return (
     <label>
-      Filter by name: 
-      <input type="text" value={value} onChange={onChange} />
+      <input
+        type="text"
+        value={value}
+        placeholder="Filter by name: "
+        onChange={onChange}
+      />
     </label>
   );
 };
