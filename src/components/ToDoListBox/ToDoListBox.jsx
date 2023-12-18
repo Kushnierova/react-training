@@ -8,10 +8,10 @@ import Filter from './Filter';
 class ToDoListBox extends Component {
   state = {
     todos: [
-      { id: 'id-1', text: 'Todo 1', completed: false },
-      { id: 'id-2', text: 'Todo 2', completed: true },
-      { id: 'id-3', text: 'Todo 3', completed: false },
-      { id: 'id-4', text: 'Todo 4', completed: false },
+      // { id: 'id-1', text: 'Todo 1', completed: false },
+      // { id: 'id-2', text: 'Todo 2', completed: true },
+      // { id: 'id-3', text: 'Todo 3', completed: false },
+      // { id: 'id-4', text: 'Todo 4', completed: false },
     ],
     filter: '',
   };
@@ -93,6 +93,15 @@ class ToDoListBox extends Component {
 
   componentDidMount() {
     console.log('App componentDidMount');
+
+    const todos = localStorage.getItem('todos');
+    const parsedTodos = JSON.parse(todos);
+
+    if(parsedTodos){
+    //       console.log(todos);
+    // console.log(parsedTodos);
+    this.setState({ todos: parsedTodos });
+    }
   }
   componentDidUpdate(prevProps, prevState) {
     console.log('App componentDidUpdate');
