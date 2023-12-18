@@ -90,8 +90,24 @@ class ToDoListBox extends Component {
       0
     );
   };
-  
+
+  componentDidMount() {
+    console.log('App componentDidMount');
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log('App componentDidUpdate');
+    // console.log(prevState);
+    // console.log(this.state);
+
+    if (this.state.todos !== prevState.todos) {
+      console.log('Updates Todos');
+
+      localStorage.setItem('todos', JSON.stringify(this.state.todos));
+    }
+  }
+
   render() {
+    console.log('App render');
     const { todos, filter } = this.state;
     const totalTodoCount = todos.length;
     // console.log(CompletedTodos.length);
