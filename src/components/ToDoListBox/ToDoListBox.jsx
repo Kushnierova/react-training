@@ -98,7 +98,7 @@ class ToDoListBox extends Component {
     const parsedTodos = JSON.parse(todos);
 
     if(parsedTodos){
-    //       console.log(todos);
+    // console.log(todos);
     // console.log(parsedTodos);
     this.setState({ todos: parsedTodos });
     }
