@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 class Modal extends Component {
   componentDidMount() {
-    crossOriginIsolated.log('Modal componentDidMount');
+    console.log('Modal componentDidMount');
   }
+
+  componentWillUnmount(){}
 }
 
 export default Modal;
