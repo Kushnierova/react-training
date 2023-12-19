@@ -25,7 +25,6 @@ class App extends Component {
     return (
       <div>
         <ul>
-          <li></li>
           <li>
             <Clock />
           </li>
