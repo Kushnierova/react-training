@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import css from './Tabs.module.css';
 
-class Tabs extends Component {
+class Tabs extends PureComponent {
   state = {
     activeTabId: 0,
   };
-// Метод для того щоб не перерендювалось те що вже є зарендереним!!!!
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.activeTabId !== this.state.activeTabId;
-  }
+
+// // Метод для того щоб не перерендювалось те що вже є зарендереним!!!! PureComponent вже робить це сам!!!!
+//   shouldComponentUpdate(nextProps, nextState) {
+//     return nextState.activeTabId !== this.state.activeTabId;
+//   }
 
   setActiveTabId = idx => {
     this.setState({ activeTabId: idx });

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 // Цей варіант для SASS
 // https://github.com/JedWatson/classnames
 // npm install classnames Треба в терміналі
@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 // import css from './ColorPicker.module.css';
 
-class ColorPicker extends Component {
+class ColorPicker extends PureComponent {
   state = {
     activeOptionIdx: 0,
   };
@@ -32,6 +32,7 @@ class ColorPicker extends Component {
   };
 
   render() {
+    console.log(`Re-render Colorpicker @ ${Date.now()}`);
     const { activeOptionIdx } = this.state;
     const { options } = this.props;
     const { label } = options[activeOptionIdx];
