@@ -4,33 +4,28 @@ import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
 import SecondLesson from './SecondLesson';
 // import ThirdLesson from './ThirdLesson';
-import Modal from './Modal';
 import Clock from './Clock';
 import Tabs from './Tabs';
 import tabs from './Tabs/tabs.json';
 
 class App extends Component {
-  state = {
-    showModal: false,
-  };
+  state = {};
 
   formSubmitHandler = data => {
     console.log(data);
   };
 
-  toggleModal = () => {
-    this.setState(({ showModal }) => ({
-      showModal: !showModal,
-    }));
-  };
+  // toggleModal = () => {
+  //   this.setState(({ showModal }) => ({
+  //     showModal: !showModal,
+  //   }));
+  // };
 
   render() {
-    const { showModal } = this.state;
     return (
       <div>
         <ul>
-          <li>
-          </li>
+          <li></li>
           <li>
             <Clock />
           </li>
@@ -43,30 +38,21 @@ class App extends Component {
           <li>
             <ToDoListBox />
           </li>
-          <li className={css.itemOpenModal}>
+          {/* <li className={css.itemOpenModal}>
             <button
               type="button"
               onClick={this.toggleModal}
               className={css.btnOpenModal}
             >
-              Open modal window
+              <AddIcon />
             </button>
 
             {showModal && (
               <Modal onClose={this.toggleModal}>
-                <h1>Hi, it is text into the modal window</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptates assumenda neque recusandae mollitia accusamus at
-                  delectus perferendis corrupti odit in animi suscipit corporis,
-                  voluptas cum illo veritatis ad. Itaque, iure.
-                </p>
-                <button type="button" onClick={this.toggleModal}>
-                  close
-                </button>
+                <ToDoEditor onSubmit={this.addTodo} />
               </Modal>
             )}
-          </li>
+          </li> */}
           <li>
             <SecondLesson onSubmit={this.formSubmitHandler} />
           </li>

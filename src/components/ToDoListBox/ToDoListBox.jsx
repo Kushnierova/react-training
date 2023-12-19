@@ -4,11 +4,14 @@ import css from './ToDoListBox.module.css';
 import ToDoList from './ToDoList';
 import ToDoEditor from './ToDoEditor';
 import Filter from './Filter';
+import Modal from 'components/Modal';
+import { ReactComponent as AddIcon } from 'icons/add.svg';
 
 class ToDoListBox extends Component {
   state = {
     todos: [],
     filter: '',
+    showModal: false,
   };
 
   addTodo = text => {
@@ -27,6 +30,9 @@ class ToDoListBox extends Component {
       // Додати на кінець списку
       // todos: [ ..todos, todo],
     }));
+
+    // Наступний метод для закриття модального выкна при натисканны на Add
+    // this.toggleModal();
   };
 
   deleteTodo = todoId => {
@@ -85,6 +91,11 @@ class ToDoListBox extends Component {
       0
     );
   };
+  toggleModal = () => {
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+    }));
+  };
 
   componentDidMount() {
     // console.log('App componentDidMount');
@@ -92,10 +103,10 @@ class ToDoListBox extends Component {
     const todos = localStorage.getItem('todos');
     const parsedTodos = JSON.parse(todos);
 
-    if(parsedTodos){
-    // console.log(todos);
-    // console.log(parsedTodos);
-    this.setState({ todos: parsedTodos });
+    if (parsedTodos) {
+      // console.log(todos);
+      // console.log(parsedTodos);
+      this.setState({ todos: parsedTodos });
     }
   }
   componentDidUpdate(prevProps, prevState) {
@@ -103,16 +114,25 @@ class ToDoListBox extends Component {
     // console.log(prevState);
     // console.log(this.state);
 
-    if (this.state.todos !== prevState.todos) {
+    const nextTodos = this.state.todos;
+    const prevTodos = prevState.todos;
+
+    if (nextTodos !== prevTodos) {
       // console.log('Updates Todos');
 
-      localStorage.setItem('todos', JSON.stringify(this.state.todos));
+      localStorage.setItem('todos', JSON.stringify(nextTodos));
+    }
+
+    // Наступний метод для закриття модального выкна при натисканны на Add
+    //  Ми це написали ще в AddTodo
+    if (nextTodos.length > prevTodos.length && prevTodos.length !== 0) {
+      this.toggleModal();
     }
   }
 
   render() {
     // console.log('App render');
-    const { todos, filter } = this.state;
+    const { todos, filter, showModal } = this.state;
     const totalTodoCount = todos.length;
     // console.log(CompletedTodos.length);
     const CompletedTodos = this.getCompletedTodoCount();
@@ -120,7 +140,19 @@ class ToDoListBox extends Component {
 
     return (
       <div className={css.container}>
-        <ToDoEditor onSubmit={this.addTodo} />
+        <button
+          type="button"
+          onClick={this.toggleModal}
+          className={css.btnOpenModal}
+        >
+          <AddIcon width="40" height="40" fill="white" />
+        </button>
+
+        {showModal && (
+          <Modal onClose={this.toggleModal}>
+            <ToDoEditor onSubmit={this.addTodo} />
+          </Modal>
+        )}
 
         <Filter value={filter} onChange={this.changeFilter} />
 

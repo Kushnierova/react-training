@@ -1,7 +1,19 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
   max-width: 400px;
   background-color: aquamarine;
   border-radius: 10px;
   margin-top: 20px;
   padding: 10px;
+}
+.btnOpenModal {
+  border-radius: 50%;
+  background-color: rgb(23, 113, 57);
+  padding: auto;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
 }

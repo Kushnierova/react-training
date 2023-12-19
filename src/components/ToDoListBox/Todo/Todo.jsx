@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Todo.module.css';
-import { ReactComponent as DeleteIcon } from '/Kateryna/GoIT/react-homework-template/src/icons/delete.svg';
+import { ReactComponent as DeleteIcon } from 'icons/delete.svg';
 
 const Todo = ({ text, completed, onToggleCompleted, onDelete }) => {
   return (

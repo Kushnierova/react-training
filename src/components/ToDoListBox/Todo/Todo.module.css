@@ -4,4 +4,7 @@
 }
 .btn {
   cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
 }
