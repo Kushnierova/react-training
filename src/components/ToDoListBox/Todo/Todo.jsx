@@ -1,7 +1,8 @@
 import React from 'react';
-import css from './Todo.module.css'
+import css from './Todo.module.css';
+import { ReactComponent as DeleteIcon } from '/Kateryna/GoIT/react-homework-template/src/icons/delete.svg';
 
-const Todo = ({text, completed, onToggleCompleted, onDelete}) => {
+const Todo = ({ text, completed, onToggleCompleted, onDelete }) => {
   return (
     <>
       <input
@@ -13,7 +14,7 @@ const Todo = ({text, completed, onToggleCompleted, onDelete}) => {
       <p className={css.text}>{text}</p>
 
       <button type="button" className={css.btn} onClick={onDelete}>
-        Delete
+        <DeleteIcon width="20" height="20" fill="black" />
       </button>
     </>
   );

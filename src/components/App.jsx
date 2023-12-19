@@ -8,7 +8,6 @@ import Modal from './Modal';
 import Clock from './Clock';
 import Tabs from './Tabs';
 import tabs from './Tabs/tabs.json';
-import IconButton from './IconButton';
 
 class App extends Component {
   state = {
@@ -30,7 +29,8 @@ class App extends Component {
     return (
       <div>
         <ul>
-          <li><IconButton/></li>
+          <li>
+          </li>
           <li>
             <Clock />
           </li>
