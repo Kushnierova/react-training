@@ -1,0 +1,16 @@
+.container {
+  background-color: rgb(191, 239, 239);
+  width: 420px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.face {
+  color: rgb(106, 21, 186);
+  font-size: 20px;
+  font-weight: 800;
+}

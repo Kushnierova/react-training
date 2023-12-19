@@ -1,0 +1,17 @@
+.itemOpenModal {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: antiquewhite;
+  width: 420px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnOpenModal {
+  background-color: rgb(183, 126, 236);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 25px;
+}

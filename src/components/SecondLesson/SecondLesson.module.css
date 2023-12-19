@@ -20,7 +20,6 @@
 }
 .submitBtn {
   width: 100px;
-  align-items: center;
   background-color: rgb(229, 111, 192);
   border-radius: 5px;
   cursor: pointer;
