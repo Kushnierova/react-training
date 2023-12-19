@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import css from './App.module.css';
+// import css from './App.module.css';
 import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
 import SecondLesson from './SecondLesson';
@@ -38,21 +38,6 @@ class App extends Component {
           <li>
             <ToDoListBox />
           </li>
-          {/* <li className={css.itemOpenModal}>
-            <button
-              type="button"
-              onClick={this.toggleModal}
-              className={css.btnOpenModal}
-            >
-              <AddIcon />
-            </button>
-
-            {showModal && (
-              <Modal onClose={this.toggleModal}>
-                <ToDoEditor onSubmit={this.addTodo} />
-              </Modal>
-            )}
-          </li> */}
           <li>
             <SecondLesson onSubmit={this.formSubmitHandler} />
           </li>
