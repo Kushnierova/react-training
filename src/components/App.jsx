@@ -6,6 +6,8 @@ import SecondLesson from './SecondLesson';
 // import ThirdLesson from './ThirdLesson';
 import Modal from './Modal';
 import Clock from './Clock';
+import Tabs from './Tabs';
+import tabs from './Tabs/tabs.json';
 
 class App extends Component {
   state = {
@@ -29,6 +31,9 @@ class App extends Component {
         <ul>
           <li>
             <Clock />
+          </li>
+          <li>
+            <Tabs items={tabs} />
           </li>
           <li>
             <FirstLesson />
