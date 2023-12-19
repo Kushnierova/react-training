@@ -6,6 +6,7 @@ import ToDoEditor from './ToDoEditor';
 import Filter from './Filter';
 import Modal from 'components/Modal';
 import { ReactComponent as AddIcon } from 'icons/add.svg';
+import IconButton from 'components/IconButton';
 
 class ToDoListBox extends Component {
   state = {
@@ -140,13 +141,13 @@ class ToDoListBox extends Component {
 
     return (
       <div className={css.container}>
-        <button
-          type="button"
+        <IconButton
           onClick={this.toggleModal}
           className={css.btnOpenModal}
+          aria-label="Add todo"
         >
           <AddIcon width="40" height="40" fill="white" />
-        </button>
+        </IconButton>
 
         {showModal && (
           <Modal onClose={this.toggleModal}>
