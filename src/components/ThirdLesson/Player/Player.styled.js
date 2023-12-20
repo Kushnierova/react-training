@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// 'react-player' - Це бібліотека для плеєрів
+// 'react-player', 'styled-components' - Це бібліотеки
 import ReactPlayer from 'react-player';
 
 export const PlayerWrapper = styled.div`

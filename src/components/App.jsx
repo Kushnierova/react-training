@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div>
         <ul>
-          {/* <li>
+          <li>
             <Clock />
           </li>
           <li>
@@ -39,7 +39,7 @@ class App extends Component {
           </li>
           <li>
             <SecondLesson onSubmit={this.formSubmitHandler} />
-          </li> */}
+          </li>
           <li>
             <ThirdLesson />
           </li>

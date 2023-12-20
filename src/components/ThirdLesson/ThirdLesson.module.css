@@ -1,0 +1,11 @@
+.containerPlayer {
+  background-color: aquamarine;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 400px;
+  height: 530px;
+}
+
+.titlePlayer{
+    font-size: 18px;
+}

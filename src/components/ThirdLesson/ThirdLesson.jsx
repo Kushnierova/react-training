@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './ThirdLesson.module.css'
 import VideoList from './VideoList';
 import Player from './Player';
 import videos from './video.json';
@@ -14,8 +15,8 @@ class ThirdLesson extends Component {
 
   render() {
     return (
-      <div style={{ padding: 24 }}>
-        <h1>Selected video: {this.state.selectedVideo}</h1>
+      <div className={css.containerPlayer} style={{ padding: 24 }}>
+        <h1 className={css.titlePlayer}>Selected video: {this.state.selectedVideo}</h1>
         <VideoList videos={videos} onSelect={this.selectVideo} />
         <Player url={this.state.selectedVideo} />
       </div>
