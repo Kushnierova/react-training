@@ -24,7 +24,7 @@ class ThirdLesson extends Component {
           <VideoList videos={videos} onSelect={this.selectVideo} />
           <Player url={this.state.selectedVideo} />
         </div>
-        <div>
+        <div className={css.containerReader}>
           <Reader />
         </div>
       </div>

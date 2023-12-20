@@ -1,11 +1,17 @@
 .containerPlayer {
   background-color: aquamarine;
   margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   width: 400px;
   height: 530px;
 }
 
 .titlePlayer{
     font-size: 18px;
+}
+.containerReader{
+    background-color: rgb(168, 127, 255);
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 400px;
 }

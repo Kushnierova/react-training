@@ -4,10 +4,14 @@ class Reader extends Component {
   state = {
     publicationIndex: 0,
   };
-  render(){
-    return(
-        <div>fdhbrfhe</div>
-    )
+  render() {
+    return (
+      <div>
+        <Controls />
+        <Progress />
+        <Publication />
+      </div>
+    );
   }
 }
 
