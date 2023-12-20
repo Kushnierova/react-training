@@ -1,3 +1,8 @@
+.containerSecondLesson {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
 .itemOpenModal {
   margin-top: 20px;
   padding-top: 20px;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Controls from './Controls';
 import Progress from './Progress';
-import Publication from './Publication';
+import Publication from './Publication/Publication';
 
 class Reader extends Component {
   state = {
@@ -22,7 +22,7 @@ class Reader extends Component {
           current={this.state.index + 1}
           total={this.props.items.length}
         />
-        <Publication item={currentItem} />
+        <Publication item={currentItem}/>
       </div>
     );
   }

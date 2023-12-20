@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import css from './App.module.css';
+import css from './App.module.css';
 import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
 import SecondLesson from './SecondLesson';
@@ -28,18 +28,21 @@ class App extends Component {
           <li>
             <Clock />
           </li>
-          <li>
-            <Tabs items={tabs} />
-          </li>
+
           <li>
             <FirstLesson />
           </li>
           <li>
             <ToDoListBox />
           </li>
+          <div className={css.containerSecondLesson}>
           <li>
             <SecondLesson onSubmit={this.formSubmitHandler} />
           </li>
+          <li>
+            <Tabs items={tabs} />
+          </li>
+          </div>
           <li>
             <ThirdLesson />
           </li>

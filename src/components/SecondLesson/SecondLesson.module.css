@@ -1,8 +1,7 @@
 .container {
-  max-width: 400px;
+  width: 430px;
   background-color: rgb(228, 166, 222);
-  border-radius: 10px;
-  margin-top: 20px;
+  border-radius: 5px;
   padding: 10px;
 }
 .form {
