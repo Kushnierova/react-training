@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-training/static/css/main.40251d84.css",
-    "main.js": "/react-training/static/js/main.3ac40649.js",
+    "main.js": "/react-training/static/js/main.bd873b2d.js",
     "reactPlayerYouTube.js": "/react-training/static/js/reactPlayerYouTube.64f82e7d.chunk.js",
     "reactPlayerSoundCloud.js": "/react-training/static/js/reactPlayerSoundCloud.0735d296.chunk.js",
     "reactPlayerVimeo.js": "/react-training/static/js/reactPlayerVimeo.1018cf6a.chunk.js",
@@ -19,7 +19,7 @@
     "static/media/delete.svg": "/react-training/static/media/delete.5575697b2be19e4c4b67136f6fa197b3.svg",
     "static/media/add.svg": "/react-training/static/media/add.b32f3a092015d7a228e03084a624cb0b.svg",
     "main.40251d84.css.map": "/react-training/static/css/main.40251d84.css.map",
-    "main.3ac40649.js.map": "/react-training/static/js/main.3ac40649.js.map",
+    "main.bd873b2d.js.map": "/react-training/static/js/main.bd873b2d.js.map",
     "reactPlayerYouTube.64f82e7d.chunk.js.map": "/react-training/static/js/reactPlayerYouTube.64f82e7d.chunk.js.map",
     "reactPlayerSoundCloud.0735d296.chunk.js.map": "/react-training/static/js/reactPlayerSoundCloud.0735d296.chunk.js.map",
     "reactPlayerVimeo.1018cf6a.chunk.js.map": "/react-training/static/js/reactPlayerVimeo.1018cf6a.chunk.js.map",
@@ -36,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.40251d84.css",
-    "static/js/main.3ac40649.js"
+    "static/js/main.bd873b2d.js"
   ]
 }
