@@ -1,0 +1,16 @@
+.section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.btn {
+  background-color: aquamarine;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: aqua;
+  color: rgb(168, 110, 113);
+}

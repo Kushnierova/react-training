@@ -4,6 +4,7 @@ import VideoList from './VideoList';
 import Player from './Player';
 import videos from './video.json';
 import Reader from './Reader';
+import publications from './Reader/publication.json';
 
 class ThirdLesson extends Component {
   state = {
@@ -25,7 +26,7 @@ class ThirdLesson extends Component {
           <Player url={this.state.selectedVideo} />
         </div>
         <div className={css.containerReader}>
-          <Reader />
+          <Reader items={publications} />
         </div>
       </div>
     );
