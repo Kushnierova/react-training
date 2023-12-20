@@ -1,0 +1,16 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  cursor: pointer;
+    font-size: 18px;
+}
+
+.item:hover,
+.item:focus {
+  color: rgb(65, 8, 186);
+
+}

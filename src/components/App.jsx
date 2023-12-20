@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
 import SecondLesson from './SecondLesson';
-// import ThirdLesson from './ThirdLesson';
 import Clock from './Clock';
 import Tabs from './Tabs';
 import tabs from './Tabs/tabs.json';
+import ThirdLesson from './ThirdLesson';
 
 class App extends Component {
   state = {};
@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div>
         <ul>
-          <li>
+          {/* <li>
             <Clock />
           </li>
           <li>
@@ -39,6 +39,9 @@ class App extends Component {
           </li>
           <li>
             <SecondLesson onSubmit={this.formSubmitHandler} />
+          </li> */}
+          <li>
+            <ThirdLesson />
           </li>
         </ul>
       </div>
