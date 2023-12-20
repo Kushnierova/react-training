@@ -25,6 +25,8 @@ class App extends Component {
     return (
       <div>
         <ul>
+          <div className={css.containerFirstLesson}>
+          <div className={css.containerInFirstLesson}>
           <li>
             <Clock />
           </li>
@@ -32,9 +34,11 @@ class App extends Component {
           <li>
             <FirstLesson />
           </li>
+          </div>
           <li>
             <ToDoListBox />
           </li>
+          </div>
           <div className={css.containerSecondLesson}>
           <li>
             <SecondLesson onSubmit={this.formSubmitHandler} />

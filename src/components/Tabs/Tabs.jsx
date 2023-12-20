@@ -30,6 +30,7 @@ class Tabs extends PureComponent {
               type="button"
               key={item.label}
               onClick={() => this.setActiveTabId(idx)}
+              className={css.item}
             >
               {item.label}
             </button>

@@ -11,6 +11,9 @@
   justify-content: center;
   gap: 10px;
 }
+.item{
+cursor: pointer;
+}
 .content {
   background-color: beige;
   margin-top: 5px;

@@ -3,26 +3,63 @@ import Controls from './Controls';
 import Progress from './Progress';
 import Publication from './Publication/Publication';
 
+const LS_KEY = 'reader_item_index';
+
 class Reader extends Component {
   state = {
     index: 0,
   };
 
-  changeIndex = value => {
-    this.setState(state => ({ index: state.index + value }));
+  checkChangeIndex = value => {
+    const index = this.state.index;
+    const totalItems = this.props.items.length;
+    // console.log(index)
+    // console.log(totalItems);
+    if (index > totalItems || index < 0) {
+      this.setState(state => ({ index: state.index + value }));
+    } else if (index > totalItems) {
+      this.setState({
+        [index]: totalItems,
+      });
+    }
+    // else {
+    //   this.setState({ index : totalItems });
+    // }
   };
+
+  //     changeIndex;
+  //   };
+  //   Якщо людина перший раз заходить на сайт,і в LocalStorage нічого немає(null) тоді впаде сайт,
+  //  щоб цього не сталось ми робимо наступне
+  componentDidMount() {
+    // console.log(localStorage.getItem(LS_KEY));
+    const savedState = localStorage.getItem(LS_KEY);
+    // if(savedState:true) null=false
+    if (savedState) {
+      this.setState({ index: Number(savedState) });
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.index !== this.state.index) {
+      localStorage.setItem(LS_KEY, this.state.index);
+    }
+  }
 
   render() {
     // console.log(this.props.items[this.state.index]);
-    const currentItem = this.props.items[this.state.index];
+    const { index } = this.state;
+    const { items } = this.props;
+    const totalItems = items.length;
+    const currentItem = items[index];
     return (
       <div>
-        <Controls onChange={this.changeIndex} />
-        <Progress
-          current={this.state.index + 1}
-          total={this.props.items.length}
+        <Controls
+          onChange={this.checkChangeIndex}
+          current={index + 1}
+          total={totalItems}
         />
-        <Publication item={currentItem}/>
+        <Progress current={index + 1} total={totalItems} />
+        <Publication item={currentItem} />
       </div>
     );
   }
