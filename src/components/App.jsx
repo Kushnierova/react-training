@@ -7,6 +7,7 @@ import Clock from './Clock';
 import Tabs from './Tabs';
 import tabs from './Tabs/tabs.json';
 import ThirdLesson from './ThirdLesson';
+import Pokemon from './Pokemon';
 
 class App extends Component {
   state = {};
@@ -26,29 +27,32 @@ class App extends Component {
       <div>
         <ul>
           <div className={css.containerFirstLesson}>
-          <div className={css.containerInFirstLesson}>
-          <li>
-            <Clock />
-          </li>
+            <div className={css.containerInFirstLesson}>
+              <li>
+                <Clock />
+              </li>
 
-          <li>
-            <FirstLesson />
-          </li>
-          </div>
-          <li>
-            <ToDoListBox />
-          </li>
+              <li>
+                <FirstLesson />
+              </li>
+            </div>
+            <li>
+              <ToDoListBox />
+            </li>
           </div>
           <div className={css.containerSecondLesson}>
-          <li>
-            <SecondLesson onSubmit={this.formSubmitHandler} />
-          </li>
-          <li>
-            <Tabs items={tabs} />
-          </li>
+            <li>
+              <SecondLesson onSubmit={this.formSubmitHandler} />
+            </li>
+            <li>
+              <Tabs items={tabs} />
+            </li>
           </div>
           <li>
             <ThirdLesson />
+          </li>
+          <li>
+            <Pokemon />
           </li>
         </ul>
       </div>
