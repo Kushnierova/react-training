@@ -5,7 +5,7 @@ const Controls = ({ current, total, onChange }) => {
     <section className={css.section}>
       <button
         type="button"
-        // disabled={current === 1}
+        disabled={current === 1}
         className={css.btn}
         onClick={() => onChange(-1)}
       >
@@ -13,7 +13,7 @@ const Controls = ({ current, total, onChange }) => {
       </button>
       <button
         type="button"
-        // disabled={current === total}
+        disabled={current === total}
         className={css.btn}
         onClick={() => onChange(+1)}
       >

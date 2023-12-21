@@ -10,25 +10,32 @@ class Reader extends Component {
     index: 0,
   };
 
-  checkChangeIndex = value => {
-    const index = this.state.index;
-    const totalItems = this.props.items.length;
-    // console.log(index)
-    // console.log(totalItems);
-    if (index > totalItems || index < 0) {
-      this.setState(state => ({ index: state.index + value }));
-    } else if (index > totalItems) {
-      this.setState({
-        [index]: totalItems,
-      });
-    }
-    // else {
-    //   this.setState({ index : totalItems });
-    // }
+  // Тут я придумую як переключати сторынки так щоб пысля 12 йшла 1, а до 1 йшла 12
+  //   checkChangeIndex = value => {
+  //     const index = this.state.index;
+  //     const totalItems = this.props.items.length;
+  //     // console.log(index)
+  //     // console.log(totalItems);
+  //     {
+  //       index > totalItems || index < 0
+  //         ? this.setState({ [index]: totalItems })
+  //         : this.setState(state => ({ index: state.index + value }));
+  //     }
+  //     //     if (index < totalItems || index > 0) {
+  //     //       this.setState(state => ({ index: state.index + value }));
+  //     //     }
+  //     //     // else if (index > totalItems) {
+  //     //     //   this.setState({ index: '0' });
+  //     //     // }
+  //     //     else {
+  //     //       this.setState({ index : totalItems });
+  //     //     }
+  //   };
+
+  changeIndex = value => {
+    this.setState(state => ({ index: state.index + value }));
   };
 
-  //     changeIndex;
-  //   };
   //   Якщо людина перший раз заходить на сайт,і в LocalStorage нічого немає(null) тоді впаде сайт,
   //  щоб цього не сталось ми робимо наступне
   componentDidMount() {
@@ -54,7 +61,7 @@ class Reader extends Component {
     return (
       <div>
         <Controls
-          onChange={this.checkChangeIndex}
+          onChange={this.changeIndex}
           current={index + 1}
           total={totalItems}
         />
