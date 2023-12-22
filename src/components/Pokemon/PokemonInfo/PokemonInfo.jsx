@@ -26,7 +26,7 @@ class PokemonInfo extends Component {
       //   console.log('nextName: ', nextName);
 
       this.setState({ status: 'pending' });
-      setTimeout(() => {
+    //   setTimeout(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${nextName}`)
           .then(response => {
             if (response.ok) {
@@ -40,7 +40,7 @@ class PokemonInfo extends Component {
           // .then(response => response.json())
           .catch(error => this.setState({ error, status: 'rejected' }));
         //   .finally(() => this.setState({ loading: false }));
-      }, 1000);
+    //   }, 1000);
     }
   }
 
