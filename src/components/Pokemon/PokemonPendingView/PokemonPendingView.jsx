@@ -16,7 +16,7 @@ function PokemonPendingView({ pokemonName }) {
     stats: [],
   };
   return (
-    <div role="">
+    <div>
       <div style={styles.spinner}>
         <ImSpinner size="32" className={css.iconSpin} />
         Please, wait...
