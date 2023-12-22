@@ -45,7 +45,7 @@ class Pokemon extends Component {
           <PokemonForm onSubmit={this.handleFormSubmit} />
         </div>
         <div>
-          <PokemonInfo pokemonInfo={pokemonName} />
+          <PokemonInfo pokemonName={pokemonName} />
         </div>
         <ToastContainer autoClose={3000} />
       </div>
