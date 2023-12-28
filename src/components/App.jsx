@@ -28,27 +28,26 @@ class App extends Component {
       <div>
         <ul>
           <div className={css.containerFirstLesson}>
-            {/* <div className={css.containerInFirstLesson}>
+            <div className={css.containerInFirstLesson}>
               <li>
                 <Clock />
               </li>
-
-              <li>
+              {/* <li>
                 <FirstLesson />
               </li>
               <li>
                 <Counter />
-              </li>
-            </div> */}
+              </li> */}
+            </div>
 
             {/* <li>
               <ToDoListBox />
             </li> */}
           </div>
           <div className={css.containerSecondLesson}>
-            <li>
+            {/* <li>
               <SingUpForm onSubmit={this.formSubmitHandler} />
-            </li>
+            </li> */}
             {/* <li>
               <Tabs items={tabs} />
             </li> */}
