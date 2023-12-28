@@ -7,11 +7,15 @@ export default function Clock() {
   const intervalId = useRef(null);
 
   useEffect(() => {
-    intervalId.current = setInterval(() => {
-      // console.log('Цей інтервал кожні 1000ms', Date.now());
+    // intervalId.current = 
+    setInterval(() => {
+      console.log('Цей інтервал кожні 2000ms', Date.now());
       setTime(new Date());
-    }, 1000);
-  }, []);
+    }, 2000);
+return()=>{
+  console.log('This is reset')
+}
+  });
 
   const stop = () => {
     clearInterval(intervalId.current);
