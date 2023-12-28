@@ -24,14 +24,17 @@ function Counter() {
   //     console.log('Запускається useEffect');
   //   }, []);
 
-// //   useEffect буде запускатися лише коли використовується counterA
-//   useEffect(() => {
-//     console.log('Запускається useEffect');
-//   }, [counterA]);
+  // //   useEffect буде запускатися лише коли змінюється counterA
+  //   useEffect(() => {
+  //     console.log('Запускається useEffect');
+  //   }, [counterA]);
 
   useEffect(() => {
-    console.log('Запускається useEffect');
-  }, [counterA]);
+    // console.log('Запускається useEffect');
+    const totalClicks = counterA + counterB;
+
+    document.title = `клікнули ${totalClicks} разів`;
+  }, [counterA, counterB]);
 
   return (
     <div className={css.container}>
