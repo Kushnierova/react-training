@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import css from './App.module.css';
 import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
-import SecondLesson from './SecondLesson';
 import Clock from './Clock';
 import Tabs from './Tabs';
 import tabs from './Tabs/tabs.json';
 import ThirdLesson from './ThirdLesson';
 import Pokemon from './Pokemon';
+import SingUpForm from './SingUpForm';
 
 class App extends Component {
   state = {};
@@ -22,39 +22,38 @@ class App extends Component {
   //   }));
   // };
 
-  
   render() {
     return (
       <div>
         <ul>
           <div className={css.containerFirstLesson}>
             <div className={css.containerInFirstLesson}>
-              <li>
+              {/* <li>
                 <Clock />
-              </li>
+              </li> */}
 
               <li>
                 <FirstLesson />
               </li>
             </div>
-            <li>
+            {/* <li>
               <ToDoListBox />
-            </li>
+            </li> */}
           </div>
           <div className={css.containerSecondLesson}>
             <li>
-              <SecondLesson onSubmit={this.formSubmitHandler} />
+              <SingUpForm onSubmit={this.formSubmitHandler} />
             </li>
-            <li>
+            {/* <li>
               <Tabs items={tabs} />
-            </li>
+            </li> */}
           </div>
-          <li>
+          {/* <li>
             <ThirdLesson />
           </li>
           <li>
             <Pokemon />
-          </li>
+          </li> */}
         </ul>
       </div>
     );
