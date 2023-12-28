@@ -28,10 +28,10 @@ class App extends Component {
       <div>
         <ul>
           <div className={css.containerFirstLesson}>
-            <div className={css.containerInFirstLesson}>
-              {/* <li>
+            {/* <div className={css.containerInFirstLesson}>
+              <li>
                 <Clock />
-              </li> */}
+              </li>
 
               <li>
                 <FirstLesson />
@@ -39,7 +39,8 @@ class App extends Component {
               <li>
                 <Counter />
               </li>
-            </div>
+            </div> */}
+
             {/* <li>
               <ToDoListBox />
             </li> */}

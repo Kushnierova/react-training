@@ -1,13 +1,26 @@
 // import React, { Component } from 'react';
-import { useState } from 'react';
+
+import useLocalStorage from 'hooks/useLocalStorage';
 import css from './SingUpForm.module.css';
 import shortid from 'shortid';
 
+// // ?? це як ||, але він повернає праву частину якщо undefined або null
+// console.log(undefined ?? 1);
+// console.log(null ?? 5);
+// console.log(0 ?? 1);
+// console.log(false ?? true);
+
 function SingUpForm() {
-  // const inputState = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  // console.log(inputState);
+  const [email, setEmail] = useLocalStorage('email', '');
+  const [password, setPassword] = useLocalStorage('password', '');
+
+  // useEffect(() => {
+  //   window.localStorage.setItem('email', JSON.stringify(email));
+  // }, [email]);
+
+  // useEffect(() => {
+  //   window.localStorage.setItem('password', JSON.stringify(password));
+  // }, [password]);
 
   const emailInputId = shortid.generate();
   const passwordInputId = shortid.generate();
