@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgb(177, 128, 223);
+  margin-top: 5px;
+  padding: 20px;
+}
+.btn {
+  cursor: pointer;
+  padding: 5px;
+}

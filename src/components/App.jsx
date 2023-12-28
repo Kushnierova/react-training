@@ -8,6 +8,7 @@ import tabs from './Tabs/tabs.json';
 import ThirdLesson from './ThirdLesson';
 import Pokemon from './Pokemon';
 import SingUpForm from './SingUpForm';
+import Counter from './Counter/Counter';
 
 class App extends Component {
   state = {};
@@ -34,6 +35,9 @@ class App extends Component {
 
               <li>
                 <FirstLesson />
+              </li>
+              <li>
+                <Counter />
               </li>
             </div>
             {/* <li>
