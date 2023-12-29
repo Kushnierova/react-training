@@ -7,15 +7,16 @@ export default function Clock() {
   const intervalId = useRef(null);
 
   useEffect(() => {
-    // intervalId.current = 
-    setInterval(() => {
+    intervalId.current = setInterval(() => {
       console.log('Цей інтервал кожні 2000ms', Date.now());
       setTime(new Date());
     }, 2000);
-return()=>{
-  console.log('This is reset')
-}
-  });
+
+    return () => {
+      // console.log('This is reset');
+      stop();
+    };
+  }, []);
 
   const stop = () => {
     clearInterval(intervalId.current);
@@ -25,7 +26,7 @@ return()=>{
     <div className={css.container}>
       <div className={css.face}>Time: {time.toLocaleTimeString()}</div>
       <button className={css.btn} type="button" onClick={stop}>
-        Stop Clock
+        Stop the Clock
       </button>
     </div>
   );
