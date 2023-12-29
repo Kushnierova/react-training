@@ -9,6 +9,7 @@ import ThirdLesson from './ThirdLesson';
 import Pokemon from './Pokemon';
 import SingUpForm from './SingUpForm';
 import Counter from './Counter/Counter';
+// import Appbar from './AppBar/AppBar';
 
 class App extends Component {
   state = {};
@@ -29,6 +30,9 @@ class App extends Component {
         <ul>
           <div className={css.containerFirstLesson}>
             <div className={css.containerInFirstLesson}>
+              <li>
+                {/* <Appbar /> */}
+              </li>
               <li>
                 <Clock />
               </li>

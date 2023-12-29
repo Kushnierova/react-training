@@ -8,7 +8,7 @@ export default function Clock() {
 
   useEffect(() => {
     intervalId.current = setInterval(() => {
-      console.log('Цей інтервал кожні 2000ms', Date.now());
+      // console.log('Цей інтервал кожні 2000ms', Date.now());
       setTime(new Date());
     }, 2000);
 
