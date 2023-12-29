@@ -32,32 +32,32 @@ class App extends Component {
               <li>
                 <Clock />
               </li>
-              {/* <li>
+              <li>
                 <FirstLesson />
               </li>
               <li>
                 <Counter />
-              </li> */}
+              </li>
             </div>
 
-            {/* <li>
+            <li>
               <ToDoListBox />
-            </li> */}
+            </li>
           </div>
           <div className={css.containerSecondLesson}>
-            {/* <li>
+            <li>
               <SingUpForm onSubmit={this.formSubmitHandler} />
-            </li> */}
-            {/* <li>
+            </li>
+            <li>
               <Tabs items={tabs} />
-            </li> */}
+            </li>
           </div>
-          {/* <li>
+          <li>
             <ThirdLesson />
           </li>
           <li>
             <Pokemon />
-          </li> */}
+          </li>
         </ul>
       </div>
     );
