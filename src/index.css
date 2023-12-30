@@ -14,8 +14,14 @@ code {
     monospace;
 }
 
-p,ul,li,h2{
+p,
+ul,
+li,
+h2 {
   margin: 0;
   list-style: none;
   padding: 0;
+}
+button {
+  cursor: pointer;
 }
