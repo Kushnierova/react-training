@@ -40,6 +40,7 @@ function PokemonInfo({ pokemonName }) {
         setStatus(Status.REJECTED);
       });
   }, [pokemonName]);
+  
 
   if (status === Status.IDLE) {
     return <p>Please, write the name of the Pokémon</p>;
