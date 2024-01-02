@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react';
+import { useState, useEffect } from 'react';
 import PokemonErrorView from '../PokemonErrorView';
 import PokemonDataView from '../PokemonDataView';
 import PokemonPendingView from '../PokemonPendingView';
