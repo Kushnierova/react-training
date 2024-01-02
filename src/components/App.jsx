@@ -9,6 +9,8 @@ import ThirdLesson from './ThirdLesson';
 import Pokemon from './Pokemon';
 import SingUpForm from './SingUpForm';
 import Counter from './Counter/Counter';
+import CounterSecond from './CounterSecond';
+import Friends from './Friends';
 // import Appbar from './AppBar/AppBar';
 
 class App extends Component {
@@ -30,37 +32,29 @@ class App extends Component {
         <ul>
           <div className={css.containerFirstLesson}>
             <div className={css.containerInFirstLesson}>
+              <li>{/* <Appbar /> */}</li>
+              <li>{/* <Clock /> */}</li>
+              <li>{/* <FirstLesson /> */}</li>
               <li>
-                {/* <Appbar /> */}
+                <Counter />
               </li>
               <li>
-                {/* <Clock /> */}
-              </li>
-              <li>
-                {/* <FirstLesson /> */}
-              </li>
-              <li>
-                {/* <Counter /> */}
+                <CounterSecond />
               </li>
             </div>
 
-            <li>
-              {/* <ToDoListBox /> */}
-            </li>
+            <li>{/* <ToDoListBox /> */}</li>
           </div>
           <div className={css.containerSecondLesson}>
-            <li>
-              {/* <SingUpForm onSubmit={this.formSubmitHandler} /> */}
-            </li>
-            <li>
-              {/* <Tabs items={tabs} /> */}
-            </li>
+            <li>{/* <SingUpForm onSubmit={this.formSubmitHandler} /> */}</li>
+            <li>{/* <Tabs items={tabs} /> */}</li>
           </div>
-          <li>
-            {/* <ThirdLesson /> */}
-          </li>
+          <li>{/* <ThirdLesson /> */}</li>
           <li>
             <Pokemon />
+          </li>
+          <li>
+            <Friends />
           </li>
         </ul>
       </div>

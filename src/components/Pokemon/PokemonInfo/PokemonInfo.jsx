@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useReducer } from 'react';
 import PokemonErrorView from '../PokemonErrorView';
 import PokemonDataView from '../PokemonDataView';
 import PokemonPendingView from '../PokemonPendingView';
@@ -11,6 +11,12 @@ const Status = {
 };
 
 function PokemonInfo({ pokemonName }) {
+// {
+//   pokemon:null,
+//   error:null,
+//   status:Status.IDLE,
+// }
+
   const [pokemon, setPokemon] = useState(null);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState(Status.IDLE);
@@ -19,7 +25,7 @@ function PokemonInfo({ pokemonName }) {
     if (!pokemonName) {
       return;
     }
-    
+
     setStatus('pending');
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
