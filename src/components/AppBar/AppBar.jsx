@@ -4,8 +4,14 @@
 // import authContext from '../Contexts/Contexts';
 // // import styles
 
+const { useLayoutEffect } = require("react");
+
 // export default function Appbar() {
 //   const {isLoggedIn, user, onLogIn, onLogOut} = useContext(authContext);
+
+// useLayoutEffect
+
+
 //   return (
 //     <header>
 //       <Navigation />

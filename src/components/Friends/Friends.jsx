@@ -49,6 +49,8 @@ function Friends() {
   const [friends] = useState(initualFriends);
   const [filter, setFilter] = useState('');
 
+//   Використовуємо тут useMemo для того щоб під час натискання на button, не перерендивались Friends
+
   const visibleFriends = useMemo(() => {
     console.log('Filter friends' + Date.now());
     return friends.filter(friend => friend.toLowerCase().includes(filter));
