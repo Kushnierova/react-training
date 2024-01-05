@@ -14,16 +14,16 @@ function Reader({ items }) {
     setIndex(index => index + value);
   };
 
-  // useEffect(() => {
-  //   const savedState = Number(localStorage.getItem(items[index]));
-  //   console.log(savedState);
-  //   if (savedState) {
-  //     setIndex(savedState);
-  //   }
-  //   if (!index) {
-  //     localStorage.setItem(LS_KEY, index);
-  //   }
-  // }, [ items,index]);
+  useEffect(() => {
+    const savedState = Number(localStorage.getItem(items[index]));
+    console.log(savedState);
+    if (savedState) {
+      setIndex(savedState);
+    }
+    if (!index) {
+      localStorage.setItem(LS_KEY, index);
+    }
+  }, [ items,index]);
 
   return (
     <div>
