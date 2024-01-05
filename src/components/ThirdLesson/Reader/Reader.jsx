@@ -15,15 +15,12 @@ function Reader({ items }) {
   };
 
   useEffect(() => {
-    const savedState = Number(localStorage.getItem(items[index]));
-    console.log(savedState);
+    const savedState = Number(localStorage.setItem(LS_KEY, index));
     if (savedState) {
       setIndex(savedState);
     }
-    if (!index) {
-      localStorage.setItem(LS_KEY, index);
-    }
-  }, [ items,index]);
+    console.log(index);
+  }, [index, items]);
 
   return (
     <div>
