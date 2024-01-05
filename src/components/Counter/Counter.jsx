@@ -26,8 +26,9 @@ function Counter() {
 
   // //   useEffect буде запускатися лише коли змінюється counterA
   //   useEffect(() => {
-  //     console.log('Запускається useEffect');
+  //     console.log(counterA+'Запускається useEffect'+Date.now());
   //   }, [counterA]);
+
 
   useEffect(() => {
     // console.log('Запускається useEffect');

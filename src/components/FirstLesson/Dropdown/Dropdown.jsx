@@ -1,32 +1,49 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
 import css from './Dropdown.module.css';
 
-class Dropdown extends Component {
+function Dropdown() {
+  const [visible, setVisible] = useState(false);
 
-  state = {
-    visible: false,
-  };
-  
-  toggle = () => {
-    this.setState(prevState => ({ visible: !prevState.visible }));
+  const toggle = () => {
+    setVisible(!visible);
   };
 
-  render() {
-    const { visible } = this.state;
+  return (
+    <div className={css.dropdown}>
+      <button type="button" className={css.dropdown__toggle} onClick={toggle}>
+        {visible ? 'Hide' : 'Show'}
+      </button>
 
-    return (
-      <div className={css.dropdown}>
-        <button
-          type="button"
-          className={css.dropdown__toggle}
-          onClick={this.toggle}
-        >
-          {visible ? 'Hide' : 'Show'}
-        </button>
-
-        {visible && <div className={css.dropdown__menu}>Menu</div>}
-      </div>
-    );
-  }
+      {visible && <div className={css.dropdown__menu}>Menu</div>}
+    </div>
+  );
 }
+
+// class OldDropdown extends Component {
+//   state = {
+//     visible: false,
+//   };
+
+//   toggle = () => {
+//     this.setState(prevState => ({ visible: !prevState.visible }));
+//   };
+
+//   render() {
+//     const { visible } = this.state;
+
+//     return (
+//       <div className={css.dropdown}>
+//         <button
+//           type="button"
+//           className={css.dropdown__toggle}
+//           onClick={this.toggle}
+//         >
+//           {visible ? 'Hide' : 'Show'}
+//         </button>
+
+//         {visible && <div className={css.dropdown__menu}>Menu</div>}
+//       </div>
+//     );
+//   }
+// }
 export default Dropdown;

@@ -4,7 +4,7 @@ import css from './ToDoListBox.module.css';
 import ToDoList from './ToDoList';
 import ToDoEditor from './ToDoEditor';
 import Filter from './Filter';
-import Modal from 'components/Modal';
+import Modal from 'components/ToDoListBox/ToDoList/Modal';
 import { ReactComponent as AddIcon } from 'icons/add.svg';
 import IconButton from 'components/IconButton';
 
