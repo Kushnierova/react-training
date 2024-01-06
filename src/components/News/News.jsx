@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import css from './News.module.css'
 import NewsSearchForm from './NewsSearchForm';
 
 axios.defaults.headers.common['Authorization'] =
@@ -57,7 +58,7 @@ export default function News() {
   const shouldRenderLoadMoreButton = articles.length > 0 && !isLoading;
 
   return (
-    <>
+    <div className={css.container}>
       {error && <h1>Ой ошибка, всё пропало!!!</h1>}
 
       <NewsSearchForm onSubmit={onChangeQuery} />
@@ -90,7 +91,7 @@ export default function News() {
           </span>
         </p>
       )}
-    </>
+    </div>
   );
 }
 
