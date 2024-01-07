@@ -12,6 +12,7 @@ import Counter from './Counter/Counter';
 import CounterSecond from './CounterSecond';
 import Friends from './Friends';
 import News from './News/';
+import UserMenu from './UserMenu/UserMenu';
 // import Appbar from './AppBar/AppBar';
 
 class App extends Component {
@@ -34,6 +35,7 @@ class App extends Component {
           <div className={css.containerFirstLesson}>
             <div className={css.containerInFirstLesson}>
               {/* <li><Appbar /></li> */}
+              <li><UserMenu/></li>
               <li>
                 <Clock />
               </li>
