@@ -21,6 +21,7 @@ export default class AuthProvider extends Component {
   }
 }
 
+
 // import { useState, useMemo } from 'react';
 // import authContext from './Contexts';
 // import avatar from './avatar.jpg';
