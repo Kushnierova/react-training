@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import css from './Dogs.module.css';
 
 const Dogs = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams);
   //     useEffect(()=>{
   // HTTP запрос, якщо потрібно
   //     },[])
