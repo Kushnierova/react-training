@@ -23,12 +23,13 @@ export default function Clock() {
   };
 
   return (
+    <div className='container'>
     <div className={css.container}>
       <div className={css.face}>Time: {time.toLocaleTimeString()}</div>
       <button className={css.btn} type="button" onClick={stop}>
         Stop the Clock
       </button>
-    </div>
+    </div></div>
   );
 }
 

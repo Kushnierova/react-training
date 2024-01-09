@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import css from './News.module.css'
+import css from './News.module.css';
 import NewsSearchForm from './NewsSearchForm';
 
 axios.defaults.headers.common['Authorization'] =
@@ -13,7 +13,7 @@ const APIfetchArticles = ({
 } = {}) => {
   return axios
     .get(
-      `https://newsapi.org/v2/everything?q=${searchQuery}&pageSize=${pageSize}&page=${currentPage}`,
+      `https://newsapi.org/v2/everything?q=${searchQuery}&pageSize=${pageSize}&page=${currentPage}`
     )
     .then(response => response.data.articles);
 };
@@ -58,39 +58,41 @@ export default function News() {
   const shouldRenderLoadMoreButton = articles.length > 0 && !isLoading;
 
   return (
-    <div className={css.container}>
-      {error && <h1>Ой ошибка, всё пропало!!!</h1>}
+    <div className='container'>
+      <div className={css.container}>
+        {error && <h1>Ой ошибка, всё пропало!!!</h1>}
 
-      <NewsSearchForm onSubmit={onChangeQuery} />
+        <NewsSearchForm onSubmit={onChangeQuery} />
 
-      <ul>
-        {articles.map(({ title, url }) => (
-          <li key={title}>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {title}
-            </a>
-          </li>
-        ))}
-      </ul>
+        <ul>
+          {articles.map(({ title, url }) => (
+            <li key={title}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {title}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      {shouldRenderLoadMoreButton && (
-        <button type="button" onClick={updatePage}>
-          Загрузить ещё
-        </button>
-      )}
+        {shouldRenderLoadMoreButton && (
+          <button type="button" onClick={updatePage}>
+            Загрузить ещё
+          </button>
+        )}
 
-      {isLoading && (
-        <p style={{ fontSize: 24, display: 'flex', alignItems: 'center' }}>
-          Загружаем...
-          <span
-            aria-label="Иконка"
-            role="img"
-            style={{ fontSize: 32, marginLeft: 10 }}
-          >
-            🧙‍♂️
-          </span>
-        </p>
-      )}
+        {isLoading && (
+          <p style={{ fontSize: 24, display: 'flex', alignItems: 'center' }}>
+            Загружаем...
+            <span
+              aria-label="Иконка"
+              role="img"
+              style={{ fontSize: 32, marginLeft: 10 }}
+            >
+              🧙‍♂️
+            </span>
+          </p>
+        )}
+      </div>
     </div>
   );
 }

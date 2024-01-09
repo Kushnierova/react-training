@@ -140,32 +140,34 @@ class ToDoListBox extends Component {
     const visibleTodos = this.getVisibleTodos();
 
     return (
-      <div className={css.container}>
-        <IconButton
-          onClick={this.toggleModal}
-          className={css.btnOpenModal}
-          aria-label="Add todo"
-        >
-          <AddIcon width="40" height="40" fill="white" />
-        </IconButton>
+      <div className='container'>
+        <div className={css.container}>
+          <IconButton
+            onClick={this.toggleModal}
+            className={css.btnOpenModal}
+            aria-label="Add todo"
+          >
+            <AddIcon width="40" height="40" fill="white" />
+          </IconButton>
 
-        {showModal && (
-          <Modal onClose={this.toggleModal}>
-            <ToDoEditor onSubmit={this.addTodo} />
-          </Modal>
-        )}
+          {showModal && (
+            <Modal onClose={this.toggleModal}>
+              <ToDoEditor onSubmit={this.addTodo} />
+            </Modal>
+          )}
 
-        <Filter value={filter} onChange={this.changeFilter} />
+          <Filter value={filter} onChange={this.changeFilter} />
 
-        <h2>Колекція нотатків</h2>
-        <p>Загальна кількість: {totalTodoCount}</p>
-        <p>Виконано: {CompletedTodos}</p>
+          <h2>Колекція нотатків</h2>
+          <p>Загальна кількість: {totalTodoCount}</p>
+          <p>Виконано: {CompletedTodos}</p>
 
-        <ToDoList
-          todos={visibleTodos}
-          onDeleteTodo={this.deleteTodo}
-          onToggleCompleted={this.toggleCompleted}
-        />
+          <ToDoList
+            todos={visibleTodos}
+            onDeleteTodo={this.deleteTodo}
+            onToggleCompleted={this.toggleCompleted}
+          />
+        </div>
       </div>
     );
   }

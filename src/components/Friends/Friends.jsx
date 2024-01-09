@@ -43,6 +43,9 @@ function Friends() {
 
   return (
     <div className="container">
+      <div className={css.container}>
+
+
       <button onClick={() => setCount(c => c + 1)}>{count}</button>
       <hr />
       <input onChange={e => setFilter(e.target.value)} value={filter} />
@@ -51,6 +54,7 @@ function Friends() {
           <li key={idx}>{friend}</li>
         ))}
       </ul>
+            </div>
     </div>
   );
 }

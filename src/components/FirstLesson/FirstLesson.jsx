@@ -14,6 +14,7 @@ const options = [
 ];
 
 const FirstLesson = () => (
+  <div className='container'>
   <div className={css.container}> 
     <div>
       <Dropdown />
@@ -21,7 +22,7 @@ const FirstLesson = () => (
     <div>
       <ColorPicker options={options} />
     </div>
-  </div>
+  </div></div>
 );
 // FirstLesson.propTypes = {
 //   friends: PropTypes.array.isRequired,

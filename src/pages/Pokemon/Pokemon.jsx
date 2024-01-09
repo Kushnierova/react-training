@@ -3,19 +3,22 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PokemonForm from '../../components/Pokemon/PokemonForm';
 import PokemonInfo from '../../components/Pokemon/PokemonInfo';
+import css from './Pokemon.module.css'
 
 function Pokemon() {
   const [pokemonName, setPokemonName] = useState('');
 
   return (
     <div className="container">
-      <div>
-        <PokemonForm onSubmit={setPokemonName} />
+      <div className={css.container}>
+        <div>
+          <PokemonForm onSubmit={setPokemonName} />
+        </div>
+        <div>
+          <PokemonInfo pokemonName={pokemonName} />
+        </div>
+        <ToastContainer autoClose={3000} />
       </div>
-      <div>
-        <PokemonInfo pokemonName={pokemonName} />
-      </div>
-      <ToastContainer autoClose={3000} />
     </div>
   );
 }

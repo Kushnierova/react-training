@@ -42,32 +42,34 @@ function SingUpForm() {
     }
   };
   return (
-    <div className={css.container}>
-      <form className={css.form} autoComplete="off">
-        <label htmlFor={emailInputId} className={css.textInput}>
-          Email:
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleChange}
-            id={emailInputId}
-          />
-        </label>
-        <label htmlFor={passwordInputId} className={css.textInput}>
-          Password:
-          <input
-            type="text"
-            name="password"
-            value={password}
-            onChange={handleChange}
-            id={passwordInputId}
-          />
-        </label>
-        <button type="submit" className={css.submitBtn}>
-          Sent
-        </button>
-      </form>
+    <div className='container'>
+      <div className={css.container}>
+        <form className={css.form} autoComplete="off">
+          <label htmlFor={emailInputId} className={css.textInput}>
+            Email:
+            <input
+              type="text"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              id={emailInputId}
+            />
+          </label>
+          <label htmlFor={passwordInputId} className={css.textInput}>
+            Password:
+            <input
+              type="text"
+              name="password"
+              value={password}
+              onChange={handleChange}
+              id={passwordInputId}
+            />
+          </label>
+          <button type="submit" className={css.submitBtn}>
+            Sent
+          </button>
+        </form>{' '}
+      </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@ import News from './News/';
 import UserMenu from './UserMenu/UserMenu';
 import NotFound from 'pages/NotFound';
 import Home from 'pages/Home';
-import Dogs from 'pages/Dogs';
+import Dogs from 'pages/Dogs/Dogs';
 import DogDetails from 'pages/DogDetails';
 import Layout from './Layout/Layout';
 import Gallery from './DogGallery/DogGallery';
@@ -51,7 +51,7 @@ class App extends Component {
             <Route
               path="counters"
               element={
-                <div>
+                <div className='container'>
                   <Counter />
                   <CounterSecond />
                 </div>
