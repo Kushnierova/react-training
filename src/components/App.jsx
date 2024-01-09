@@ -16,6 +16,17 @@ import News from './News/';
 import UserMenu from './UserMenu/UserMenu';
 import NotFound from 'pages/NotFound';
 import Home from 'pages/Home';
+import styled from 'styled-components';
+import Dogs from 'pages/Dogs';
+import DogDetails from 'pages/DogDetails';
+
+const StyledLink = styled(NavLink)`
+  color: white;
+
+  &.active {
+    color: orange;
+  }
+`;
 
 class App extends Component {
   state = {};
@@ -28,22 +39,27 @@ class App extends Component {
     return (
       <div>
         <header className={css.nav}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/userName">User Name</NavLink>
-          <NavLink to="/singUpForm">Sing up Form</NavLink>
-          <NavLink to="/pokemons">Pokemons</NavLink>
-          <NavLink to="/colorPicker">Color Picker</NavLink>
-          <NavLink to="/clock">Clock</NavLink>
-          <NavLink to="/counters">Counters</NavLink>
-          <NavLink to="/toDoList">To Do List</NavLink>
-          <NavLink to="/news">News</NavLink>
-          <NavLink to="/tabs">Tabs</NavLink>
-          <NavLink to="/playerAndReader">Player & Reader</NavLink>
-          <NavLink to="/friends">Friends</NavLink>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/userName">User Name</StyledLink>
+          <StyledLink to="/dogs">Dogs</StyledLink>
+          <StyledLink to="/singUpForm">Sing up Form</StyledLink>
+          <StyledLink to="/pokemons">Pokemons</StyledLink>
+          <StyledLink to="/colorPicker">Color Picker</StyledLink>
+          <StyledLink to="/clock">Clock</StyledLink>
+          <StyledLink to="/counters">Counters</StyledLink>
+          <StyledLink to="/toDoList">To Do List</StyledLink>
+          <StyledLink to="/news">News</StyledLink>
+          <StyledLink to="/tabs">Tabs</StyledLink>
+          <StyledLink to="/playerAndReader">Player & Reader</StyledLink>
+          <StyledLink to="/friends">Friends</StyledLink>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/userName" element={<UserMenu />} />
+
+          <Route path="/dogs" element={<Dogs />} />
+          <Route path="/dogs/:dogId" element={<DogDetails />} />
+
           <Route
             path="/singUpForm"
             element={<SingUpForm onSubmit={this.formSubmitHandler} />}

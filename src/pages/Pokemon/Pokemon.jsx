@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './Pokemon.module.css';
-import PokemonForm from './PokemonForm';
-import PokemonInfo from './PokemonInfo';
+import PokemonForm from '../../components/Pokemon/PokemonForm';
+import PokemonInfo from '../../components/Pokemon/PokemonInfo';
 
 function Pokemon() {
   const [pokemonName, setPokemonName] = useState('');
