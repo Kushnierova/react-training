@@ -22,26 +22,6 @@ const initualFriends = [
   'Abdisalam',
   'Abdul',
   'Abdul-Aziz',
-  'Abdulbasir',
-  'Abdulkadir',
-  'Abdulkarem',
-  'Abdulkhader',
-  'Abdullah',
-  'Abdul-Majeed',
-  'Abdulmalik',
-  'Abdul-Rehman',
-  'Abdur',
-  'Abdurraheem',
-  'Abdur-Rahman',
-  'Abdur-Rehmaan',
-  'Abel',
-  'Abhinav',
-  'Abhisumant',
-  'Abid',
-  'Abir',
-  'Abraham',
-  'Abu',
-  'Abubakar',
 ];
 
 function Friends() {
@@ -62,7 +42,7 @@ function Friends() {
   //   })();
 
   return (
-    <div className={css.container}>
+    <div className="container">
       <button onClick={() => setCount(c => c + 1)}>{count}</button>
       <hr />
       <input onChange={e => setFilter(e.target.value)} value={filter} />

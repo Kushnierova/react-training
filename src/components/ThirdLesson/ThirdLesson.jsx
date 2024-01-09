@@ -17,7 +17,7 @@ class ThirdLesson extends Component {
 
   render() {
     return (
-      <div className={css.container}>
+      <div className="container">
         <div className={css.containerPlayer} style={{ padding: 24 }}>
           <h1 className={css.titlePlayer}>
             Selected video: {this.state.selectedVideo}

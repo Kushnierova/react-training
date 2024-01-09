@@ -6,22 +6,24 @@ function Tabs({ items }) {
   const activeTab = items[activeTabId];
 
   return (
-    <div className={css.container}>
-      <div className={css.items}>
-        {items.map((item, idx) => (
-          <button
-            type="button"
-            key={item.label}
-            onClick={() => setActiveTabId(idx)}
-            className={css.item}
-          >
-            {item.label}
-          </button>
-        ))}
-      </div>
-      <div className={css.content}>
-        <h2>{activeTab.label}</h2>
-        <p>{activeTab.content}</p>
+    <div className='container'>
+      <div className={css.container}>
+        <div className={css.items}>
+          {items.map((item, idx) => (
+            <button
+              type="button"
+              key={item.label}
+              onClick={() => setActiveTabId(idx)}
+              className={css.item}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+        <div className={css.content}>
+          <h2>{activeTab.label}</h2>
+          <p>{activeTab.content}</p>
+        </div>
       </div>
     </div>
   );

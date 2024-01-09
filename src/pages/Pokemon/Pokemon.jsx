@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import css from './Pokemon.module.css';
 import PokemonForm from '../../components/Pokemon/PokemonForm';
 import PokemonInfo from '../../components/Pokemon/PokemonInfo';
 
@@ -9,7 +8,7 @@ function Pokemon() {
   const [pokemonName, setPokemonName] = useState('');
 
   return (
-    <div className={css.container}>
+    <div className="container">
       <div>
         <PokemonForm onSubmit={setPokemonName} />
       </div>
