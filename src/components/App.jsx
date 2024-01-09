@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
-import css from './App.module.css';
+import { Route, Routes } from 'react-router-dom';
 import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
 import Clock from './Clock';
@@ -16,17 +15,10 @@ import News from './News/';
 import UserMenu from './UserMenu/UserMenu';
 import NotFound from 'pages/NotFound';
 import Home from 'pages/Home';
-import styled from 'styled-components';
 import Dogs from 'pages/Dogs';
 import DogDetails from 'pages/DogDetails';
+import Layout from './Layout/Layout';
 
-const StyledLink = styled(NavLink)`
-  color: white;
-
-  &.active {
-    color: orange;
-  }
-`;
 
 class App extends Component {
   state = {};
@@ -38,50 +30,37 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className={css.nav}>
-          <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/userName">User Name</StyledLink>
-          <StyledLink to="/dogs">Dogs</StyledLink>
-          <StyledLink to="/singUpForm">Sing up Form</StyledLink>
-          <StyledLink to="/pokemons">Pokemons</StyledLink>
-          <StyledLink to="/colorPicker">Color Picker</StyledLink>
-          <StyledLink to="/clock">Clock</StyledLink>
-          <StyledLink to="/counters">Counters</StyledLink>
-          <StyledLink to="/toDoList">To Do List</StyledLink>
-          <StyledLink to="/news">News</StyledLink>
-          <StyledLink to="/tabs">Tabs</StyledLink>
-          <StyledLink to="/playerAndReader">Player & Reader</StyledLink>
-          <StyledLink to="/friends">Friends</StyledLink>
-        </header>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/userName" element={<UserMenu />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="userName" element={<UserMenu />} />
 
-          <Route path="/dogs" element={<Dogs />} />
-          <Route path="/dogs/:dogId" element={<DogDetails />} />
+            <Route path="dogs" element={<Dogs />} />
+            <Route path="dogs/:dogId" element={<DogDetails />} />
 
-          <Route
-            path="/singUpForm"
-            element={<SingUpForm onSubmit={this.formSubmitHandler} />}
-          />
-          <Route path="/pokemons" element={<Pokemon />} />
-          <Route path="/colorPicker" element={<FirstLesson />} />
-          <Route path="/clock" element={<Clock />} />
-          <Route
-            path="/counters"
-            element={
-              <div>
-                <Counter />
-                <CounterSecond />
-              </div>
-            }
-          />
-          <Route path="/toDoList" element={<ToDoListBox />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/tabs" element={<Tabs items={tabs} />} />
-          <Route path="/playerAndReader" element={<ThirdLesson />} />
-          <Route path="/friends" element={<Friends />} />
-          <Route path="*" element={<NotFound />} />
+            <Route
+              path="singUpForm"
+              element={<SingUpForm onSubmit={this.formSubmitHandler} />}
+            />
+            <Route path="pokemons" element={<Pokemon />} />
+            <Route path="colorPicker" element={<FirstLesson />} />
+            <Route path="clock" element={<Clock />} />
+            <Route
+              path="counters"
+              element={
+                <div>
+                  <Counter />
+                  <CounterSecond />
+                </div>
+              }
+            />
+            <Route path="toDoList" element={<ToDoListBox />} />
+            <Route path="news" element={<News />} />
+            <Route path="tabs" element={<Tabs items={tabs} />} />
+            <Route path="playerAndReader" element={<ThirdLesson />} />
+            <Route path="friends" element={<Friends />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </div>
     );
