@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from 'components/App';
 import AuthProvider from 'components/contexts/AuthProvider';
 import './index.css';
-import './components/FirstLesson/ColorPicker/ColorPicker.css';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import css from './App.module.css';
 import FirstLesson from './FirstLesson';
 import ToDoListBox from './ToDoListBox';
@@ -31,50 +32,115 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ul>
-          <div className={css.containerFirstLesson}>
-            <div className={css.containerInFirstLesson}>
-              {/* <li><Appbar /></li> */}
-              <li><UserMenu/></li>
-              <li>
-                <Clock />
-              </li>
-              <li>
+        <nav className={css.nav}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/userName">User Name</NavLink>
+          <NavLink to="/singUpForm">Sing up Form</NavLink>
+          <NavLink to="/pokemons">Pokemons</NavLink>
+          <NavLink to="/colorPicker">Color Picker</NavLink>
+          <NavLink to="/clock">Clock</NavLink>
+          <NavLink to="/counters">Counters</NavLink>
+          <NavLink to="/toDoList">To Do List</NavLink>
+          <NavLink to="/news">News</NavLink>
+          <NavLink to="/tabs">Tabs</NavLink>
+          <NavLink to="/playerAndReader">Player & Reader</NavLink>
+          <NavLink to="/friends">Friends</NavLink>
+        </nav>
+        <Routes>
+          <Route path="/" element={<div>Home</div>} />
+          <Route
+            path="/userName"
+            element={
+              <div>
+                <UserMenu />
+              </div>
+            }
+          />
+          <Route
+            path="/singUpForm"
+            element={
+              <div>
+                <SingUpForm onSubmit={this.formSubmitHandler} />
+              </div>
+            }
+          />
+          <Route
+            path="/pokemons"
+            element={
+              <div>
+                <Pokemon />
+              </div>
+            }
+          />
+          <Route
+            path="/colorPicker"
+            element={
+              <div>
                 <FirstLesson />
-              </li>
-              <li>
+              </div>
+            }
+          />
+          <Route
+            path="/clock"
+            element={
+              <div>
+                {' '}
+                <Clock />
+              </div>
+            }
+          />
+          <Route
+            path="/counters"
+            element={
+              <div>
+                {' '}
                 <Counter />
-              </li>
-              <li>
                 <CounterSecond />
-              </li>
-            </div>
-
-            <li>
-              <ToDoListBox />
-            </li>
-            <li>
-              <News />
-            </li>
-          </div>
-          <div className={css.containerSecondLesson}>
-            <li>
-              <SingUpForm onSubmit={this.formSubmitHandler} />
-            </li>
-            <li>
-              <Tabs items={tabs} />
-            </li>
-          </div>
-          <li>
-            <ThirdLesson />
-          </li>
-          <li>
-            <Pokemon />
-          </li>
-          <li>
-            <Friends />
-          </li>
-        </ul>
+              </div>
+            }
+          />
+          <Route
+            path="/toDoList"
+            element={
+              <div>
+                <ToDoListBox />
+              </div>
+            }
+          />
+          <Route
+            path="/news"
+            element={
+              <div>
+                <News />
+              </div>
+            }
+          />
+          <Route
+            path="/tabs"
+            element={
+              <div>
+                <Tabs items={tabs} />
+              </div>
+            }
+          />
+          <Route
+            path="/playerAndReader"
+            element={
+              <div>
+                <ThirdLesson />
+              </div>
+            }
+          />
+          <Route
+            path="/friends"
+            element={
+              <div>
+                {' '}
+                <Friends />
+              </div>
+            }
+          />
+        </Routes>
       </div>
     );
   }

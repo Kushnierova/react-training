@@ -1,32 +1,8 @@
-.containerFirstLesson {
+.nav {
+  background-color: black;
+  padding: 10px;
   display: flex;
   gap: 10px;
-}
-.containerInFirstLesson {
-  width: 440px;
-  background-color: rgb(201, 141, 157);
-  padding: 5px;
-  border-radius: 5px;
-}
-.containerSecondLesson {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-.itemOpenModal {
-  margin-top: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: antiquewhite;
-  width: 420px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-.btnOpenModal {
-  background-color: rgb(183, 126, 236);
-  border-radius: 5px;
-  cursor: pointer;
-  height: 25px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
