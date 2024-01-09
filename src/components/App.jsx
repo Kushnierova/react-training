@@ -14,7 +14,8 @@ import CounterSecond from './CounterSecond';
 import Friends from './Friends';
 import News from './News/';
 import UserMenu from './UserMenu/UserMenu';
-// import Appbar from './AppBar/AppBar';
+import NotFound from 'pages/NotFound';
+import Home from 'pages/Home';
 
 class App extends Component {
   state = {};
@@ -23,16 +24,10 @@ class App extends Component {
     console.log(data);
   };
 
-  // toggleModal = () => {
-  //   this.setState(({ showModal }) => ({
-  //     showModal: !showModal,
-  //   }));
-  // };
-
   render() {
     return (
       <div>
-        <nav className={css.nav}>
+        <header className={css.nav}>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/userName">User Name</NavLink>
           <NavLink to="/singUpForm">Sing up Form</NavLink>
@@ -45,101 +40,32 @@ class App extends Component {
           <NavLink to="/tabs">Tabs</NavLink>
           <NavLink to="/playerAndReader">Player & Reader</NavLink>
           <NavLink to="/friends">Friends</NavLink>
-        </nav>
+        </header>
         <Routes>
-          <Route path="/" element={<div>Home</div>} />
-          <Route
-            path="/userName"
-            element={
-              <div>
-                <UserMenu />
-              </div>
-            }
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/userName" element={<UserMenu />} />
           <Route
             path="/singUpForm"
-            element={
-              <div>
-                <SingUpForm onSubmit={this.formSubmitHandler} />
-              </div>
-            }
+            element={<SingUpForm onSubmit={this.formSubmitHandler} />}
           />
-          <Route
-            path="/pokemons"
-            element={
-              <div>
-                <Pokemon />
-              </div>
-            }
-          />
-          <Route
-            path="/colorPicker"
-            element={
-              <div>
-                <FirstLesson />
-              </div>
-            }
-          />
-          <Route
-            path="/clock"
-            element={
-              <div>
-                {' '}
-                <Clock />
-              </div>
-            }
-          />
+          <Route path="/pokemons" element={<Pokemon />} />
+          <Route path="/colorPicker" element={<FirstLesson />} />
+          <Route path="/clock" element={<Clock />} />
           <Route
             path="/counters"
             element={
               <div>
-                {' '}
                 <Counter />
                 <CounterSecond />
               </div>
             }
           />
-          <Route
-            path="/toDoList"
-            element={
-              <div>
-                <ToDoListBox />
-              </div>
-            }
-          />
-          <Route
-            path="/news"
-            element={
-              <div>
-                <News />
-              </div>
-            }
-          />
-          <Route
-            path="/tabs"
-            element={
-              <div>
-                <Tabs items={tabs} />
-              </div>
-            }
-          />
-          <Route
-            path="/playerAndReader"
-            element={
-              <div>
-                <ThirdLesson />
-              </div>
-            }
-          />
-          <Route
-            path="/friends"
-            element={
-              <div>
-                {' '}
-                <Friends />
-              </div>
-            }
-          />
+          <Route path="/toDoList" element={<ToDoListBox />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/tabs" element={<Tabs items={tabs} />} />
+          <Route path="/playerAndReader" element={<ThirdLesson />} />
+          <Route path="/friends" element={<Friends />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     );
