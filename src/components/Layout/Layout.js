@@ -31,7 +31,7 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>Footer</footer>
+      <footer className={css.footer}>Footer</footer>
     </div>
   );
 };

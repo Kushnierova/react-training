@@ -9,3 +9,15 @@
     box-shadow: rgb(83, 127, 231) 0px 0px 10px;
   }
   
+
+  .footer{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 26px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: rgb(83, 127, 231) 0px 0px 10px;
+    color: azure;
+  }
