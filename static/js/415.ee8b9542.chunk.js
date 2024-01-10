@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_training=self.webpackChunkreact_training||[]).push([[415],{5415:function(e,n,a){a.r(n);var c=a(184);n.default=function(){return(0,c.jsx)("div",{className:"container",children:(0,c.jsx)("p",{children:"Welcome to Home Page"})})}}}]);
+//# sourceMappingURL=415.ee8b9542.chunk.js.map
