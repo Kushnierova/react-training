@@ -29,7 +29,7 @@ button {
 .container {
   background-color: rgb(38, 34, 39);
   display: flex;
-justify-content: center;
+  justify-content: center;
   gap: 10px;
   width: 100%;
   height: 580px;
