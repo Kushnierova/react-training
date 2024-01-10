@@ -1,24 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import FirstLesson from './FirstLesson';
-import ToDoListBox from './ToDoListBox';
-import Clock from './Clock';
-import Tabs from './Tabs';
+
 import tabs from './Tabs/tabs.json';
-import ThirdLesson from './ThirdLesson';
-import Pokemon from './Pokemon';
-import SingUpForm from './SingUpForm';
-import Counter from './Counter/Counter';
-import CounterSecond from './CounterSecond';
-import Friends from './Friends';
-import News from './News/';
-import UserMenu from './UserMenu/UserMenu';
-import NotFound from 'pages/NotFound';
-import Home from 'pages/Home';
-import Dogs from 'pages/Dogs/Dogs';
-import DogDetails from 'pages/DogDetails';
 import Layout from './Layout/Layout';
-import Gallery from './DogGallery/DogGallery';
+
+const FirstLesson = lazy(() => import('./FirstLesson'));
+const ToDoListBox = lazy(() => import('./ToDoListBox'));
+const Clock = lazy(() => import('./Clock'));
+const Tabs = lazy(() => import('./Tabs'));
+const ThirdLesson = lazy(() => import('./ThirdLesson'));
+const Pokemon = lazy(() => import('./Pokemon'));
+const Counter = lazy(() => import('./Counter/Counter'));
+const CounterSecond = lazy(() => import('./CounterSecond'));
+const SingUpForm = lazy(() => import('./SingUpForm'));
+const Friends = lazy(() => import('./Friends'));
+const News = lazy(() => import('./News/'));
+const UserMenu = lazy(() => import('./UserMenu/UserMenu'));
+
+const Home = lazy(() => import('pages/Home'));
+const Dogs = lazy(() => import('pages/Dogs/Dogs'));
+const NotFound = lazy(() => import('pages/NotFound'));
+const DogDetails = lazy(() => import('pages/DogDetails'));
+const Gallery = lazy(() => import('./DogGallery/DogGallery'));
 
 class App extends Component {
   state = {};
@@ -51,7 +54,7 @@ class App extends Component {
             <Route
               path="counters"
               element={
-                <div className='container'>
+                <div className="container">
                   <Counter />
                   <CounterSecond />
                 </div>

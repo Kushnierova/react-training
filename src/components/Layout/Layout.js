@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import styled from 'styled-components';
 import css from './Layout.module.css';
 
@@ -29,9 +30,17 @@ const Layout = () => {
         <StyledLink to="/friends">Friends</StyledLink>
       </header>
       <main>
-        <Outlet />
+        <Suspense
+          fallback={
+            <div className="container">
+              <p className={css.loading}>Loading...</p>
+            </div>
+          }
+        >
+          <Outlet />
+        </Suspense>
       </main>
-      <footer className={css.footer}>Footer</footer>
+      <footer className={css.footer}><p className={css.footerText}>Footer</p></footer>
     </div>
   );
 };
