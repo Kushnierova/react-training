@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
 import css from './CounterSecond.module.css';
 
+
 function countReducer(state, action) {
   switch (action.type) {
     case 'increment':
@@ -15,6 +16,23 @@ function countReducer(state, action) {
       throw new Error('Unsuported action type $action.type{}');
   }
 }
+
+
+
+// function countReducer(state, action) {
+//   switch (action.type) {
+//     case 'increment':
+//       // return state + action.payload;
+//       return { ...state, count: state.count + action.payload };
+
+//     case 'decrement':
+//       // return state - action.payload;
+//       return { ...state, count: state.count - action.payload };
+
+//     default:
+//       throw new Error('Unsuported action type $action.type{}');
+//   }
+// }
 function init(initialState) {
   // використовується наприклад для Локал Сторедж, загрузка перший раз
   return { ...initialState, count: initialState.count + 100 };
