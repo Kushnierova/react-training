@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-training/static/css/main.86506dc2.css",
-    "main.js": "/react-training/static/js/main.2afe2dc6.js",
+    "main.js": "/react-training/static/js/main.6720a990.js",
     "static/css/684.163822d4.chunk.css": "/react-training/static/css/684.163822d4.chunk.css",
     "static/js/684.7d0c05ef.chunk.js": "/react-training/static/js/684.7d0c05ef.chunk.js",
     "static/css/835.2941c0b0.chunk.css": "/react-training/static/css/835.2941c0b0.chunk.css",
@@ -14,10 +14,10 @@
     "static/js/190.ae72136b.chunk.js": "/react-training/static/js/190.ae72136b.chunk.js",
     "static/css/805.dc6be1cd.chunk.css": "/react-training/static/css/805.dc6be1cd.chunk.css",
     "static/js/805.ba72fa61.chunk.js": "/react-training/static/js/805.ba72fa61.chunk.js",
-    "static/css/449.0780d397.chunk.css": "/react-training/static/css/449.0780d397.chunk.css",
-    "static/js/449.282a1045.chunk.js": "/react-training/static/js/449.282a1045.chunk.js",
-    "static/css/737.a04d6b30.chunk.css": "/react-training/static/css/737.a04d6b30.chunk.css",
-    "static/js/737.e1609df8.chunk.js": "/react-training/static/js/737.e1609df8.chunk.js",
+    "static/css/449.37001e8a.chunk.css": "/react-training/static/css/449.37001e8a.chunk.css",
+    "static/js/449.0591b2a5.chunk.js": "/react-training/static/js/449.0591b2a5.chunk.js",
+    "static/css/842.1256dd2f.chunk.css": "/react-training/static/css/842.1256dd2f.chunk.css",
+    "static/js/842.04a1976d.chunk.js": "/react-training/static/js/842.04a1976d.chunk.js",
     "static/css/553.03d7ccef.chunk.css": "/react-training/static/css/553.03d7ccef.chunk.css",
     "static/js/553.d82860f9.chunk.js": "/react-training/static/js/553.d82860f9.chunk.js",
     "static/css/177.fbb9b6c6.chunk.css": "/react-training/static/css/177.fbb9b6c6.chunk.css",
@@ -28,7 +28,7 @@
     "static/js/415.ee8b9542.chunk.js": "/react-training/static/js/415.ee8b9542.chunk.js",
     "static/css/463.8e454b2d.chunk.css": "/react-training/static/css/463.8e454b2d.chunk.css",
     "static/js/463.e666ba7a.chunk.js": "/react-training/static/js/463.e666ba7a.chunk.js",
-    "static/js/842.7d09ec99.chunk.js": "/react-training/static/js/842.7d09ec99.chunk.js",
+    "static/js/44.2e648b0b.chunk.js": "/react-training/static/js/44.2e648b0b.chunk.js",
     "static/js/791.5896a695.chunk.js": "/react-training/static/js/791.5896a695.chunk.js",
     "static/js/769.74f2baf5.chunk.js": "/react-training/static/js/769.74f2baf5.chunk.js",
     "reactPlayerYouTube.js": "/react-training/static/js/reactPlayerYouTube.64f82e7d.chunk.js",
@@ -52,7 +52,7 @@
     "static/media/delete.svg": "/react-training/static/media/delete.5575697b2be19e4c4b67136f6fa197b3.svg",
     "static/media/add.svg": "/react-training/static/media/add.b32f3a092015d7a228e03084a624cb0b.svg",
     "main.86506dc2.css.map": "/react-training/static/css/main.86506dc2.css.map",
-    "main.2afe2dc6.js.map": "/react-training/static/js/main.2afe2dc6.js.map",
+    "main.6720a990.js.map": "/react-training/static/js/main.6720a990.js.map",
     "684.163822d4.chunk.css.map": "/react-training/static/css/684.163822d4.chunk.css.map",
     "684.7d0c05ef.chunk.js.map": "/react-training/static/js/684.7d0c05ef.chunk.js.map",
     "835.2941c0b0.chunk.css.map": "/react-training/static/css/835.2941c0b0.chunk.css.map",
@@ -65,10 +65,10 @@
     "190.ae72136b.chunk.js.map": "/react-training/static/js/190.ae72136b.chunk.js.map",
     "805.dc6be1cd.chunk.css.map": "/react-training/static/css/805.dc6be1cd.chunk.css.map",
     "805.ba72fa61.chunk.js.map": "/react-training/static/js/805.ba72fa61.chunk.js.map",
-    "449.0780d397.chunk.css.map": "/react-training/static/css/449.0780d397.chunk.css.map",
-    "449.282a1045.chunk.js.map": "/react-training/static/js/449.282a1045.chunk.js.map",
-    "737.a04d6b30.chunk.css.map": "/react-training/static/css/737.a04d6b30.chunk.css.map",
-    "737.e1609df8.chunk.js.map": "/react-training/static/js/737.e1609df8.chunk.js.map",
+    "449.37001e8a.chunk.css.map": "/react-training/static/css/449.37001e8a.chunk.css.map",
+    "449.0591b2a5.chunk.js.map": "/react-training/static/js/449.0591b2a5.chunk.js.map",
+    "842.1256dd2f.chunk.css.map": "/react-training/static/css/842.1256dd2f.chunk.css.map",
+    "842.04a1976d.chunk.js.map": "/react-training/static/js/842.04a1976d.chunk.js.map",
     "553.03d7ccef.chunk.css.map": "/react-training/static/css/553.03d7ccef.chunk.css.map",
     "553.d82860f9.chunk.js.map": "/react-training/static/js/553.d82860f9.chunk.js.map",
     "177.fbb9b6c6.chunk.css.map": "/react-training/static/css/177.fbb9b6c6.chunk.css.map",
@@ -79,7 +79,7 @@
     "415.ee8b9542.chunk.js.map": "/react-training/static/js/415.ee8b9542.chunk.js.map",
     "463.8e454b2d.chunk.css.map": "/react-training/static/css/463.8e454b2d.chunk.css.map",
     "463.e666ba7a.chunk.js.map": "/react-training/static/js/463.e666ba7a.chunk.js.map",
-    "842.7d09ec99.chunk.js.map": "/react-training/static/js/842.7d09ec99.chunk.js.map",
+    "44.2e648b0b.chunk.js.map": "/react-training/static/js/44.2e648b0b.chunk.js.map",
     "791.5896a695.chunk.js.map": "/react-training/static/js/791.5896a695.chunk.js.map",
     "769.74f2baf5.chunk.js.map": "/react-training/static/js/769.74f2baf5.chunk.js.map",
     "reactPlayerYouTube.64f82e7d.chunk.js.map": "/react-training/static/js/reactPlayerYouTube.64f82e7d.chunk.js.map",
@@ -100,6 +100,6 @@
   },
   "entrypoints": [
     "static/css/main.86506dc2.css",
-    "static/js/main.2afe2dc6.js"
+    "static/js/main.6720a990.js"
   ]
 }
