@@ -44,14 +44,14 @@ function Counter() {
         type="button"
         onClick={handleCounterAIncrement}
       >
-        "A" клікнули {counterA} разів
+        "A" клікнули <span className={css.number}>{counterA}</span> разів
       </button>
       <button
         className={css.btn}
         type="button"
         onClick={handleCounterBIncrement}
       >
-        "B" клікнули {counterB} разів
+        "B" клікнули <span className={css.number}>{counterB}</span> разів
       </button>
     </div>
   );

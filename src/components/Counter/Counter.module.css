@@ -5,8 +5,18 @@
   background-color: rgb(177, 128, 223);
   margin-top: 5px;
   padding: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
 }
 .btn {
   cursor: pointer;
   padding: 5px;
+}
+
+.number{
+  font-size: 24px;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(76, 13, 149);
 }
