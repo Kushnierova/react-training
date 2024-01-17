@@ -17,8 +17,8 @@ const reducer = (state, action) => {
   }
 };
 
-const store = createStore(reducer, { total: 0, users: [] });
+export const store = createStore(reducer, { total: 0, users: [] });
 
-console.log('store:>>', store);
-store.dispatch({ type: 'increment', payload: 1 });
-console.log(store.getState());
+// console.log('store:>>', store);
+// store.dispatch({ type: 'increment', payload: 1 });
+// console.log(store.getState());
