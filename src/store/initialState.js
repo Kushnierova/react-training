@@ -1,4 +1,7 @@
+import { counterIinitialState } from './counter/initialState';
+import { todosIinitialState } from './todos/initialState';
+
 export const initialState = {
-  counter: { total: 0, step: 1 },
-  todos: { todos: [], filteredTodo: [] },
+  counter: counterIinitialState,
+  todos: todosIinitialState,
 };

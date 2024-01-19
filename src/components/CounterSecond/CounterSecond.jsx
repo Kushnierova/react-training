@@ -3,8 +3,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './CounterSecond.module.css';
 import Step from 'components/Step/Step';
-import { increment } from 'store/action';
-import { decrement } from 'store/action';
+import { increment } from 'store/counter/actions';
+import { decrement } from 'store/counter/actions';
 
 const CounterSecond = () => {
   // const [total, setTotal] = useState();

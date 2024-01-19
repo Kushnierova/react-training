@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './Step.module.css';
-import { setStep } from 'store/action';
+import { setStep } from 'store/counter/actions';
 
 // import { setStep } from 'store/store';
 
