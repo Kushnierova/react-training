@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_training=self.webpackChunkreact_training||[]).push([[842],{9805:function(n,t,r){r.r(t);var e=r(184);t.default=function(){return(0,e.jsx)("p",{children:"Sorry, nothing was found on this web path"})}}}]);
+//# sourceMappingURL=842.7d09ec99.chunk.js.map
