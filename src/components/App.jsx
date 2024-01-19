@@ -1,6 +1,5 @@
 import React, { Component, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import css from './App.module.css'
 
 import tabs from './Tabs/tabs.json';
 import Layout from './Layout/Layout';

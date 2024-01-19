@@ -3,17 +3,20 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './CounterSecond.module.css';
 import Step from 'components/Step/Step';
+import { increment } from 'store/action';
+import { decrement } from 'store/action';
 
 const CounterSecond = () => {
   // const [total, setTotal] = useState();
-  const { total, step } = useSelector(state => state);
+  const { total, step } = useSelector(state => state.counter);
 
   const dispatch = useDispatch();
+
   const handleCounterAIncrement = () => {
-    dispatch({ type: 'increment', payload: step });
+    dispatch(increment(step));
   };
   const handleCounterBIncrement = () => {
-    dispatch({ type: 'decrement', payload: step });
+    dispatch(decrement(step));
   };
 
   return (
